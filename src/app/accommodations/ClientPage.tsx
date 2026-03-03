@@ -30,7 +30,7 @@ export default function Accommodations() {
     const { openModal } = useContactModal();
 
     return (
-        <div className="bg-[#041B1C] min-h-screen text-foreground pt-36 pb-32">
+        <div className="bg-[#041B1C] min-h-screen text-foreground pt-24 md:pt-36 pb-20 md:pb-32">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
@@ -40,22 +40,22 @@ export default function Accommodations() {
                     transition={{ duration: 1 }}
                     className="text-center mb-40"
                 >
-                    <h1 className="text-5xl md:text-7xl font-serif text-primary tracking-wide">Spaces of Stillness</h1>
-                    <p className="mt-8 text-sm md:text-base text-foreground/70 font-sans tracking-[0.2em] font-light max-w-2xl mx-auto uppercase">
+                    <h1 className="text-4xl md:text-7xl font-serif text-primary tracking-wide">Spaces of Stillness</h1>
+                    <p className="mt-6 md:mt-8 text-sm md:text-base text-foreground/70 font-sans tracking-[0.2em] font-light max-w-2xl mx-auto uppercase">
                         Spacious, airy rooms designed for comfort.
                     </p>
                 </motion.div>
 
                 {/* Room Showcase */}
-                <div className="flex flex-col gap-40 mb-40">
+                <div className="flex flex-col gap-20 md:gap-40 mb-24 md:mb-40">
                     {ROOMS.map((room, i) => (
-                        <div key={room.name} className={`flex flex-col ${i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"} gap-12 md:gap-24 items-center`}>
+                        <div key={room.name} className={`flex flex-col ${i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"} gap-8 md:gap-24 items-center`}>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-10%" }}
                                 transition={{ duration: 1.2, ease: "easeOut" }}
-                                className="w-full md:w-3/5 h-[50vh] md:h-[70vh] bg-teal-900 overflow-hidden relative"
+                                className="w-full md:w-3/5 h-[40vh] md:h-[70vh] bg-teal-900 overflow-hidden relative"
                             >
                                 <div
                                     className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-[8s] opacity-80 mix-blend-luminosity"
@@ -85,8 +85,8 @@ export default function Accommodations() {
                 </div>
 
                 {/* Guest Q&A */}
-                <div className="max-w-3xl mx-auto mt-40">
-                    <h3 className="text-2xl md:text-3xl font-serif text-center text-primary mb-16">Guest Logistics</h3>
+                <div className="max-w-3xl mx-auto mt-24 md:mt-40">
+                    <h3 className="text-2xl md:text-3xl font-serif text-center text-primary mb-10 md:mb-16">Guest Logistics</h3>
                     <div className="flex flex-col divide-y divide-teal-800/30 border-y border-teal-800/30">
                         {FAQ.map((faq, i) => (
                             <div key={i} className="py-6">

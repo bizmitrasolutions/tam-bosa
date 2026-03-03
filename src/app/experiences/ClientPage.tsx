@@ -15,7 +15,7 @@ const RHYTHM = [
         time: "Afternoon",
         title: "Gliding Across Backwaters",
         desc: "Spend your day soaking up the sun or opt for a kayaking experience. Experience the landscape in its purest form as you glide across the slow-moving backwaters.",
-        img: "https://images.unsplash.com/photo-1455243387813-f9a72175a00a?q=80&w=2070&auto=format&fit=crop"
+        img: "https://images.unsplash.com/photo-1544470451-b84175deebfb?q=80&w=2070&auto=format&fit=crop"
     },
     {
         phase: "The Unwinding",
@@ -28,7 +28,7 @@ const RHYTHM = [
 
 export default function Experiences() {
     return (
-        <div className="bg-background text-foreground min-h-screen pt-36 pb-32">
+        <div className="bg-background text-foreground min-h-screen pt-24 md:pt-36 pb-20 md:pb-32">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
@@ -38,17 +38,17 @@ export default function Experiences() {
                     transition={{ duration: 1 }}
                     className="text-center mb-32"
                 >
-                    <h1 className="text-5xl md:text-7xl font-serif text-teal-900 tracking-wide">The Daily Rhythm</h1>
+                    <h1 className="text-4xl md:text-7xl font-serif text-primary tracking-wide">The Daily Rhythm</h1>
                     <p className="mt-8 text-sm md:text-base text-teal-800/80 font-sans tracking-[0.2em] font-medium max-w-2xl mx-auto uppercase">
                         A chronological breakdown of life at the retreat.
                     </p>
-                    <p className="mt-8 text-sm text-teal-900/70 font-sans font-light max-w-3xl mx-auto leading-relaxed">
+                    <p className="mt-8 text-sm text-primary/70 font-sans font-light max-w-3xl mx-auto leading-relaxed">
                         TAM-BoSa Resort is uniquely positioned on a narrow strip of land where the dynamic Arabian Sea meets tranquil Udupi backwater networks. This rare geography allows our guests to experience two entirely different ecosystems within a single day.
                     </p>
                 </motion.div>
 
                 {/* Timeline */}
-                <div className="relative border-l-2 border-primary/30 ml-4 md:ml-12 flex flex-col gap-32 pb-20">
+                <div className="relative border-l-2 border-primary/30 ml-4 md:ml-12 flex flex-col gap-20 md:gap-32 pb-16 md:pb-20">
 
                     {RHYTHM.map((item, i) => (
                         <motion.div
@@ -61,11 +61,11 @@ export default function Experiences() {
                         >
                             <div className="absolute -left-[9px] top-4 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
 
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
                                 <div>
                                     <span className="text-xs font-bold uppercase tracking-[0.3em] text-teal-400">{item.time}</span>
-                                    <p className="text-xs uppercase tracking-[0.2em] text-teal-900/60 mt-2 mb-6">{item.phase}</p>
-                                    <h2 className="text-3xl md:text-5xl font-serif text-teal-900 leading-tight mb-8">{item.title}</h2>
+                                    <p className="text-xs uppercase tracking-[0.2em] text-primary/60 mt-2 mb-6">{item.phase}</p>
+                                    <h2 className="text-3xl md:text-5xl font-serif text-primary leading-tight mb-8">{item.title}</h2>
                                     <p className="text-foreground/80 font-sans tracking-wider font-light mb-16 max-w-sm text-sm leading-relaxed">{item.desc}</p>
 
                                     {i === 1 && (

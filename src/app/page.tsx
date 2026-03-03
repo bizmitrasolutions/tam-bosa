@@ -31,7 +31,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[14vw] md:text-[11vw] leading-[0.85] font-serif text-primary-soft tracking-tighter uppercase relative z-20 flex flex-col items-center"
+            className="text-[11vw] md:text-[11vw] leading-[0.85] font-serif text-primary-soft tracking-tighter uppercase relative z-20 flex flex-col items-center"
           >
             <span>BEACHFRONT</span>
             <span className="text-foreground md:ml-[15vw] inline-block mt-[-2vw]">BLISS</span>
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* The Duality */}
-      <section className="relative min-h-[150vh] bg-foreground text-background py-16 md:py-40 px-6">
+      <section className="relative min-h-[150vh] bg-foreground text-background py-20 md:py-40 px-6">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="relative w-full h-[60vh] md:h-[80vh] flex flex-col justify-center">
 
@@ -59,7 +59,7 @@ export default function Home() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
               viewport={{ once: true, margin: "-10%" }}
-              className="absolute left-0 top-10 md:top-0 w-[90%] md:w-[65%] h-[50vh] bg-teal-800 z-10 overflow-hidden mix-blend-multiply"
+              className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] bg-teal-800 z-10 overflow-hidden mix-blend-multiply"
             >
               <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop')] bg-cover bg-center opacity-70 mix-blend-luminosity hover:scale-105 transition-transform duration-[10s]" />
             </motion.div>
@@ -69,7 +69,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               viewport={{ once: true, margin: "-10%" }}
-              className="absolute right-0 bottom-0 md:bottom-10 w-[75%] md:w-[45%] h-[35vh] md:h-[45vh] bg-primary z-20 p-8 md:p-12 flex flex-col justify-end"
+              className="absolute right-0 bottom-0 md:bottom-10 w-[85%] md:w-[45%] h-[35vh] md:h-[45vh] bg-primary z-20 p-6 md:p-12 flex flex-col justify-end"
             >
               <h2 className="text-4xl md:text-7xl font-serif text-teal-900 leading-none">THE<br />DUALITY</h2>
               <p className="mt-6 md:mt-8 text-teal-900/80 font-sans text-[10px] md:text-xs tracking-[0.2em] font-medium uppercase">Ocean Movement vs Backwater Stillness</p>
@@ -77,7 +77,7 @@ export default function Home() {
 
           </div>
 
-          <div className="mt-48 w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-end max-w-5xl">
+          <div className="mt-28 md:mt-48 w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 items-end max-w-5xl">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -106,12 +106,12 @@ export default function Home() {
       </section>
 
       {/* The Retreat's Essence */}
-      <section className="relative py-16 md:py-40 lg:py-60 bg-[#041B1C] text-foreground px-6 overflow-hidden">
+      <section className="relative py-20 md:py-40 lg:py-60 bg-[#041B1C] text-foreground px-6 overflow-hidden">
         <div className="absolute right-0 top-0 w-1/3 h-full bg-teal-900/20 blur-[100px] rounded-full mix-blend-screen pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10">
-          <h3 className="text-[10px] uppercase font-bold tracking-[0.4em] text-primary mb-32 ml-4 md:ml-20">The Essence</h3>
+          <h3 className="text-[10px] uppercase font-bold tracking-[0.4em] text-primary mb-20 md:mb-32 ml-4 md:ml-20">The Essence</h3>
 
-          <div className="flex flex-col gap-32 md:gap-48">
+          <div className="flex flex-col gap-28 md:gap-48">
             {[
               {
                 num: "01",
@@ -138,9 +138,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 transition={{ duration: 1, delay: 0.1 }}
                 viewport={{ once: true, margin: "-20%" }}
-                className={`flex flex-col md:flex-row items-center gap-6 md:gap-12 relative ${i % 2 !== 0 ? "md:ml-auto md:flex-row-reverse" : "md:mr-auto"} max-w-5xl`}
+                className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 relative ${i % 2 !== 0 ? "md:ml-auto md:flex-row-reverse" : "md:mr-auto"} max-w-5xl`}
               >
-                <div className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 -left-4 md:-left-8 lg:-left-16 z-0 mix-blend-screen select-none pointer-events-none">{item.num}</div>
+                <div className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 -left-2 md:-left-8 lg:-left-16 z-0 mix-blend-screen select-none pointer-events-none">{item.num}</div>
 
                 <div className="w-full md:w-1/2 h-64 md:h-96 relative z-10 overflow-hidden">
                   <div className="absolute inset-0 bg-teal-900/20 mix-blend-multiply z-10 pointer-events-none" />
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Outro CTA */}
-      <section className="py-16 md:py-32 bg-primary flex justify-center text-center px-6">
+      <section className="py-24 md:py-32 bg-primary flex justify-center text-center px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl md:text-5xl font-serif text-teal-900 leading-tight mb-10">
             Come experience a stay where the sea greets you.

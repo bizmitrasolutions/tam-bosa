@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useContactModal } from "@/contexts/ContactModalContext";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
     const { scrollY } = useScroll();
     const [hidden, setHidden] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { openModal } = useContactModal();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -64,7 +66,39 @@ export function Navbar() {
                 >
                     Reserve
                 </button>
+                <button
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className="md:hidden text-foreground hover:text-primary transition-colors focus:outline-none"
+                    aria-label="Toggle Menu"
+                >
+                    {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
             </nav>
+
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="md:hidden absolute top-full left-0 right-0 bg-[#041B1C]/95 backdrop-blur-lg border-b border-teal-900/50 flex flex-col items-center py-8 gap-6 shadow-2xl z-[60] overflow-hidden"
+                    >
+                        <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Home</Link>
+                        <Link href="/accommodations" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Accommodations</Link>
+                        <Link href="/experiences" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Experiences</Link>
+                        <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Gallery</Link>
+                        <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Contact</Link>
+
+                        <button
+                            onClick={() => { setMobileMenuOpen(false); openModal(); }}
+                            className="mt-4 px-10 py-3 bg-primary text-background font-semibold uppercase tracking-widest text-xs rounded-sm hover:bg-primary-soft transition-colors"
+                        >
+                            Reserve Now
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.header>
     );
 }
