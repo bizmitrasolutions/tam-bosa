@@ -1,0 +1,247 @@
+
+> tmp-app@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\moham\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\moham\Desktop\Personal Projects\Others\tam-bosa\package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 9 errors:
+./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx:3:1
+Module not found: Can't resolve 'framer-motion'
+  1 | "use client";
+  2 |
+> 3 | import { motion } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useState } from "react";
+  5 | import { ChevronDown } from "lucide-react";
+  6 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useState } from "react";
+> 4 | import { motion } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+  6 |
+  7 | export default function Contact() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/experiences/page.tsx:3:1
+Module not found: Can't resolve 'framer-motion'
+  1 | "use client";
+  2 |
+> 3 | import { motion } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const RHYTHM = [
+  6 |     {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/experiences/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/experiences/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/experiences/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/experiences/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx:4:1
+Module not found: Can't resolve 'framer-motion'
+  2 |
+  3 | import { useState } from "react";
+> 4 | import { motion, AnimatePresence } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { X, ZoomIn } from "lucide-react";
+  6 |
+  7 | const IMAGES = [
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/page.tsx:3:1
+Module not found: Can't resolve 'framer-motion'
+  1 | "use client";
+  2 |
+> 3 | import { motion, useScroll, useTransform } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { useRef } from "react";
+  5 |
+  6 | export default function Home() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/components/layout/Navbar.tsx:5:1
+Module not found: Can't resolve 'framer-motion'
+  3 | import { useState } from "react";
+  4 | import Link from "next/link";
+> 5 | import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export function Navbar() {
+  8 |     const { scrollY } = useScroll();
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/components/layout/Navbar.tsx
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx:5:1
+Module not found: Can't resolve 'lucide-react'
+  3 | import { motion } from "framer-motion";
+  4 | import { useState } from "react";
+> 5 | import { ChevronDown } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | const FAQ = [
+  8 |     { q: "What time is check-in and check-out?", a: "Check-in is from 2:00 PM, and check-out is at 11:00 AM. Early check-in or late check-out is subject to availability." },
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx:5:1
+Module not found: Can't resolve 'lucide-react'
+  3 | import { useState } from "react";
+  4 | import { motion } from "framer-motion";
+> 5 | import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | export default function Contact() {
+  8 |     const [formData, setFormData] = useState({
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx:5:1
+Module not found: Can't resolve 'lucide-react'
+  3 | import { useState } from "react";
+  4 | import { motion, AnimatePresence } from "framer-motion";
+> 5 | import { X, ZoomIn } from "lucide-react";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | const IMAGES = [
+  8 |     "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop",
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Client Component Browser]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Client Component SSR]
+    ./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/experiences/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/components/layout/Navbar.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/accommodations/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/contact/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./Desktop/Personal Projects/Others/tam-bosa/src/app/gallery/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
