@@ -8,21 +8,21 @@ const RHYTHM = [
         time: "Morning",
         title: "Barefoot Walks & Sunrise Calm",
         desc: "Mornings begin with barefoot walks on the pristine beach just 100 steps away. The sea greets you, setting a peaceful tone for the hours ahead.",
-        img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop"
+        img: "/images/entrance-2.png"
     },
     {
         phase: "The Exploration",
         time: "Afternoon",
         title: "Gliding Across Backwaters",
         desc: "Spend your day soaking up the sun or opt for a kayaking experience. Experience the landscape in its purest form as you glide across the slow-moving backwaters.",
-        img: "https://images.unsplash.com/photo-1544470451-b84175deebfb?q=80&w=2070&auto=format&fit=crop"
+        img: "/images/river-view.png"
     },
     {
         phase: "The Unwinding",
         time: "Evening",
         title: "Golden Skies Mirrored",
         desc: "Listen to the breeze rustle through palm trees. Evenings end with golden skies mirrored in still waters, lulling you into deep tranquility.",
-        img: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=2071&auto=format&fit=crop"
+        img: "/images/sunset-view.png"
     }
 ];
 
@@ -75,9 +75,9 @@ export default function Experiences() {
                                     )}
                                 </div>
 
-                                <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden bg-teal-900">
+                                <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden">
                                     <div
-                                        className="w-full h-full bg-cover bg-center opacity-90 transition-transform duration-[10s] hover:scale-110 blur-[1px] hover:blur-none"
+                                        className="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
                                         style={{ backgroundImage: `url(${item.img})` }}
                                     />
                                 </div>

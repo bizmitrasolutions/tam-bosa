@@ -16,12 +16,12 @@ const ROOMS = [
     {
         name: "Oceanfront Suite",
         desc: "A sprawling 850 sq.ft private suite offering unobstructed, panoramic views of the Arabian Sea. Features include a plush king-sized bed, a private sun deck, an open-air rain shower, and direct, 10-second access to the pristine beach.",
-        img: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop"
+        img: "/images/bedroom.png"
     },
     {
         name: "Backwater Villa",
         desc: "A serene 900 sq.ft sanctuary framed by lush tropical greenery, mirroring the stillness of the Udupi backwaters. Enjoy exclusive amenities such as a private plunge pool, a dedicated reading lounge, and secluded evening ambiance away from the coast.",
-        img: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2070&auto=format&fit=crop"
+        img: "/images/bedroom-4.png"
     }
 ];
 
@@ -55,10 +55,10 @@ export default function Accommodations() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-10%" }}
                                 transition={{ duration: 1.2, ease: "easeOut" }}
-                                className="w-full md:w-3/5 h-[40vh] md:h-[70vh] bg-teal-900 overflow-hidden relative"
+                                className="w-full md:w-3/5 h-[40vh] md:h-[70vh] overflow-hidden relative"
                             >
                                 <div
-                                    className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-[8s] opacity-80 mix-blend-luminosity"
+                                    className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-[8s]"
                                     style={{ backgroundImage: `url(${room.img})` }}
                                 />
                             </motion.div>

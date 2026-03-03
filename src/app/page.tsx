@@ -19,8 +19,7 @@ export default function Home() {
       <section className="relative h-[110vh] flex flex-col justify-center overflow-hidden">
         {/* Abstract Background Gradient & Image */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#072C2F]/90 via-[#041B1C]/80 to-black/90" />
+          <div className="absolute inset-0 bg-[url('/images/outside-view.png')] bg-cover bg-center" />
         </div>
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
@@ -45,8 +44,6 @@ export default function Home() {
             A Private Escape Wrapped in Nature
           </motion.p>
         </motion.div>
-        {/* Grain overlay */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none z-30" />
       </section>
 
       {/* The Duality */}
@@ -59,9 +56,9 @@ export default function Home() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
               viewport={{ once: true, margin: "-10%" }}
-              className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] bg-teal-800 z-10 overflow-hidden mix-blend-multiply"
+              className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] z-10 overflow-hidden"
             >
-              <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop')] bg-cover bg-center opacity-70 mix-blend-luminosity hover:scale-105 transition-transform duration-[10s]" />
+              <div className="w-full h-full bg-[url('/images/river-view.png')] bg-cover bg-center hover:scale-105 transition-transform duration-[10s]" />
             </motion.div>
 
             <motion.div
@@ -117,19 +114,19 @@ export default function Home() {
                 num: "01",
                 title: "Dual Views",
                 desc: "A front-row seat to nature at its most serene. Beach on one side, calming backwaters on the other.",
-                img: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop"
+                img: "/images/entrance.png"
               },
               {
                 num: "02",
                 title: "Lush Greenery",
                 desc: "Embraced by vibrant thickets for ultimate privacy and peace. This is not just a stay, it's a reset.",
-                img: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=1974&auto=format&fit=crop"
+                img: "/images/garden.png"
               },
               {
                 num: "03",
                 title: "100 Steps",
                 desc: "Walkable pristine beach access. Sunrise strolls and sunset dips are an everyday luxury.",
-                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop"
+                img: "/images/sunset-view.png"
               }
             ].map((item, i) => (
               <motion.div
@@ -143,7 +140,6 @@ export default function Home() {
                 <div className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 -left-2 md:-left-8 lg:-left-16 z-0 mix-blend-screen select-none pointer-events-none">{item.num}</div>
 
                 <div className="w-full md:w-1/2 h-64 md:h-96 relative z-10 overflow-hidden">
-                  <div className="absolute inset-0 bg-teal-900/20 mix-blend-multiply z-10 pointer-events-none" />
                   <div
                     className="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-[10s]"
                     style={{ backgroundImage: `url(${item.img})` }}

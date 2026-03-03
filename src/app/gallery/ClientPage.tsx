@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn } from "lucide-react";
 
 const IMAGES = [
-    { src: "https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop", alt: "TAM-BoSa beachfront view with ocean waves" },
-    { src: "https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=1974&auto=format&fit=crop", alt: "Luxury coastal dining setup at sunset" },
-    { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop", alt: "Private pool overlooking the Udupi backwaters" },
-    { src: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop", alt: "Tropical greenery surrounding the private villas" },
-    { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop", alt: "Premium Oceanfront suite bedroom interior" },
-    { src: "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?q=80&w=2070&auto=format&fit=crop", alt: "Serene morning view of the beach retreat" }
+    { src: "/images/bedroom-2.png", alt: "TAM-BoSa beachfront view with ocean waves" },
+    { src: "/images/lobby.png", alt: "Luxury coastal dining setup at sunset" },
+    { src: "/images/sitting-area.png", alt: "Private pool overlooking the Udupi backwaters" },
+    { src: "/images/washroom.png", alt: "Tropical greenery surrounding the private villas" },
+    { src: "/images/bedroom-7.png", alt: "Premium Oceanfront suite bedroom interior" },
+    { src: "/images/entrance.png", alt: "Serene morning view of the beach retreat" }
 ];
 
 // Asymmetric heights to force a fragmented masonry
@@ -50,14 +50,14 @@ export default function Gallery() {
                             layoutId={`img-container-${img.src}`}
                             key={img.src}
                             onClick={() => setSelectedId(img.src)}
-                            className={`relative overflow-hidden cursor-pointer group bg-teal-900 ${SPANS[i]}`}
+                            className={`relative overflow-hidden cursor-pointer group ${SPANS[i]}`}
                         >
                             <motion.img
                                 src={img.src}
                                 alt={img.alt}
-                                className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-110 opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100"
+                                className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <ZoomIn className="text-primary w-10 h-10" strokeWidth={1} />
                             </div>
                         </motion.div>
