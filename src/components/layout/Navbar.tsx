@@ -38,8 +38,8 @@ export function Navbar() {
                     : "bg-transparent border-transparent"
                     }`}
             >
-                <Link href="/" className="text-xl font-serif font-medium tracking-wide text-primary">
-                    TAM-BoSa
+                <Link href="/" className="flex items-center">
+                    <img src="/logo.png" alt="TAM-BoSa Logo" className="h-10 w-auto object-contain" />
                 </Link>
                 <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
                     <Link href="/" className="hover:text-primary transition-colors">

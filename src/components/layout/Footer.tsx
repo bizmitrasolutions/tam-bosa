@@ -5,8 +5,8 @@ export function Footer() {
         <footer className="bg-[#041B1C] border-t border-teal-900 pt-24 pb-12 px-6 mt-32 relative overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16 relative z-10">
                 <div className="max-w-md">
-                    <Link href="/" className="text-3xl font-serif tracking-wide text-primary inline-block mb-6">
-                        TAM-BoSa
+                    <Link href="/" className="inline-block mb-6">
+                        <img src="/logo.png" alt="TAM-BoSa Logo" className="h-12 w-auto object-contain" />
                     </Link>
                     <p className="text-[15px] text-foreground/70 leading-relaxed font-sans font-light">
                         A private escape wrapped in nature. Where the sea greets you and backwaters lull you into peaceful evenings. Barefoot luxury, 100 steps from the ocean.

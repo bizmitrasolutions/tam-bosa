@@ -26,7 +26,8 @@ export default function Home() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4"
         >
-          <motion.h1
+          <h1 className="sr-only">TAM-BoSa Luxury Beach Retreat in Udupi</h1>
+          <motion.h2
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
@@ -34,7 +35,7 @@ export default function Home() {
           >
             <span>BEACHFRONT</span>
             <span className="text-foreground md:ml-[15vw] inline-block mt-[-2vw]">BLISS</span>
-          </motion.h1>
+          </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
