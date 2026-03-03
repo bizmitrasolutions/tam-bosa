@@ -12,7 +12,7 @@ Develop a 5-page, high-conversion luxury website for TAM-BoSa Beach Retreat. The
 - "Contact Us" form successfully redirects to WhatsApp with a pre-filled message (no complex backend needed)
 - Adherence to the provided color palette (Teal gradient, Gold, Green, Water Accent)
 - High lighthouse scores for performance and accessibility (no purple/violet)
-
+ 
 ## 4. Tech Stack
 - **Framework:** Next.js (App Router) - For rapid development, optimal performance, and static file generation capabilities.
 - **Styling:** Tailwind CSS - For utility-first, rapid UI development.
