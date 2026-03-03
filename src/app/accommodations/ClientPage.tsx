@@ -6,21 +6,21 @@ import { ChevronDown } from "lucide-react";
 import { useContactModal } from "@/contexts/ContactModalContext";
 
 const FAQ = [
-    { q: "What time is check-in and check-out?", a: "Check-in is from 2:00 PM, and check-out is at 11:00 AM. Early check-in or late check-out is subject to availability." },
-    { q: "Is the beach safe for swimming?", a: "The pristine beach is generally safe, though we advise checking seasonal tide warnings provided by our concierge." },
-    { q: "Do you offer airport transfers?", a: "Yes, we arrange premium airport transfers upon request. Please contact us prior to your arrival." },
-    { q: "Are children allowed at the retreat?", a: "Absolutely. We are a family-friendly sanctuary with expansive spaces for all ages to reconnect." },
+    { q: "What time is check-in and check-out?", a: "Check-in is from 2:00 PM, and check-out is at 11:00 AM." },
+    { q: "How far is the beach?", a: "The beach is a very short, 100-meter walk across the road from the homestay." },
+    { q: "Do you offer activities?", a: "While we provide a comfortable stay, activities like boating and kayaking are available nearby for an additional charge." },
+    { q: "Are children allowed at the retreat?", a: "Absolutely. We are a family-friendly homestay with spaces for all ages to relax together." },
 ];
 
 const ROOMS = [
     {
         name: "Oceanfront Suite",
-        desc: "A sprawling 850 sq.ft private suite offering unobstructed, panoramic views of the Arabian Sea. Features include a plush king-sized bed, a private sun deck, an open-air rain shower, and direct, 10-second access to the pristine beach.",
+        desc: "A comfortable, beautifully designed suite offering views towards the Arabian Sea. Features include a cozy bed, well-planned architecture, and easy access to the beach just across the road. Enjoy our dedicated service throughout your stay.",
         img: "/images/bedroom.png"
     },
     {
         name: "Backwater Villa",
-        desc: "A serene 900 sq.ft sanctuary framed by lush tropical greenery, mirroring the stillness of the Udupi backwaters. Enjoy exclusive amenities such as a private plunge pool, a dedicated reading lounge, and secluded evening ambiance away from the coast.",
+        desc: "A serene room situated closer to the quiet river, framed by natural greenery. Designed for families and nature lovers, it offers a peaceful retreat with thoughtful aesthetics and warm hospitality.",
         img: "/images/bedroom-4.png"
     }
 ];
@@ -40,9 +40,9 @@ export default function Accommodations() {
                     transition={{ duration: 1 }}
                     className="text-center mb-40"
                 >
-                    <h1 className="text-4xl md:text-7xl font-serif text-primary tracking-wide">Spaces of Stillness</h1>
+                    <h1 className="text-4xl md:text-7xl font-serif text-primary tracking-wide">Comfortable Stays</h1>
                     <p className="mt-6 md:mt-8 text-sm md:text-base text-foreground/70 font-sans tracking-[0.2em] font-light max-w-2xl mx-auto uppercase">
-                        Spacious, airy rooms designed for comfort.
+                        Thoughtful architecture and warm service.
                     </p>
                 </motion.div>
 

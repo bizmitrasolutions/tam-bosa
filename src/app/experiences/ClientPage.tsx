@@ -2,26 +2,26 @@
 
 import { motion } from "framer-motion";
 
-const RHYTHM = [
+const ACTIVITIES = [
     {
-        phase: "The Awakening",
-        time: "Morning",
-        title: "Barefoot Walks & Sunrise Calm",
-        desc: "Mornings begin with barefoot walks on the pristine beach just 100 steps away. The sea greets you, setting a peaceful tone for the hours ahead.",
-        img: "/images/entrance-2.png"
-    },
-    {
-        phase: "The Exploration",
-        time: "Afternoon",
-        title: "Gliding Across Backwaters",
-        desc: "Spend your day soaking up the sun or opt for a kayaking experience. Experience the landscape in its purest form as you glide across the slow-moving backwaters.",
+        phase: "Nature & Water",
+        time: "Nearby",
+        title: "Boating & Kayaking",
+        desc: "Explore the gentle currents of the Udupi river right next to the homestay. We can help arrange boating and kayaking sessions with local operators.",
         img: "/images/river-view.png"
     },
     {
-        phase: "The Unwinding",
-        time: "Evening",
-        title: "Golden Skies Mirrored",
-        desc: "Listen to the breeze rustle through palm trees. Evenings end with golden skies mirrored in still waters, lulling you into deep tranquility.",
+        phase: "Beach Excursions",
+        time: "Nearby",
+        title: "Delta Beach Visits",
+        desc: "Take a short trip to Delta Beach, a stunning local spot where the river meets the sea, perfect for evening sunsets and coastal photography.",
+        img: "/images/entrance-2.png"
+    },
+    {
+        phase: "Local Discoveries",
+        time: "Nearby",
+        title: "Udupi Culture",
+        desc: "Venture out to experience authentic Udupi heritage, local temples, and famous regional cuisine just a short drive from the property.",
         img: "/images/sunset-view.png"
     }
 ];
@@ -38,19 +38,19 @@ export default function Experiences() {
                     transition={{ duration: 1 }}
                     className="text-center mb-32"
                 >
-                    <h1 className="text-4xl md:text-7xl font-serif text-primary tracking-wide">The Daily Rhythm</h1>
+                    <h1 className="text-4xl md:text-7xl font-serif text-primary tracking-wide">Explore the Area</h1>
                     <p className="mt-8 text-sm md:text-base text-teal-800/80 font-sans tracking-[0.2em] font-medium max-w-2xl mx-auto uppercase">
-                        A chronological breakdown of life at the retreat.
+                        Discover what Udupi has to offer.
                     </p>
                     <p className="mt-8 text-sm text-primary/70 font-sans font-light max-w-3xl mx-auto leading-relaxed">
-                        TAM-BoSa Resort is uniquely positioned on a narrow strip of land where the dynamic Arabian Sea meets tranquil Udupi backwater networks. This rare geography allows our guests to experience two entirely different ecosystems within a single day.
+                        While TAM-BoSa Resort provides a peaceful stay by the river, there are numerous activities available close by. Please note that these are independent local experiences and can be arranged at an additional cost.
                     </p>
                 </motion.div>
 
                 {/* Timeline */}
                 <div className="relative border-l-2 border-primary/30 ml-4 md:ml-12 flex flex-col gap-20 md:gap-32 pb-16 md:pb-20">
 
-                    {RHYTHM.map((item, i) => (
+                    {ACTIVITIES.map((item, i) => (
                         <motion.div
                             key={item.phase}
                             initial={{ opacity: 0, x: -50 }}
@@ -68,11 +68,9 @@ export default function Experiences() {
                                     <h2 className="text-3xl md:text-5xl font-serif text-primary leading-tight mb-8">{item.title}</h2>
                                     <p className="text-foreground/80 font-sans tracking-wider font-light mb-16 max-w-sm text-sm leading-relaxed">{item.desc}</p>
 
-                                    {i === 1 && (
-                                        <div className="mt-10 inline-block px-4 py-2 border border-primary text-primary text-[10px] uppercase font-bold tracking-[0.2em]">
-                                            Optional Experience available at extra cost
-                                        </div>
-                                    )}
+                                    <div className="mt-10 inline-block px-4 py-2 border border-primary text-primary text-[10px] uppercase font-bold tracking-[0.2em]">
+                                        Arranged nearby at extra cost
+                                    </div>
                                 </div>
 
                                 <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden">

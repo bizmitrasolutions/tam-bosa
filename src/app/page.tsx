@@ -25,15 +25,15 @@ export default function Home() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4"
         >
-          <h1 className="sr-only">TAM-BoSa Luxury Beach Retreat in Udupi</h1>
+          <h1 className="sr-only">TAM-BoSa Riverside Retreat in Udupi</h1>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-[11vw] md:text-[11vw] leading-[0.85] font-serif text-primary-soft tracking-tighter uppercase relative z-20 flex flex-col items-center"
           >
-            <span>BEACHFRONT</span>
-            <span className="text-foreground md:ml-[15vw] inline-block mt-[-2vw]">BLISS</span>
+            <span>RIVERSIDE</span>
+            <span className="text-foreground md:ml-[15vw] inline-block mt-[-2vw]">STAY</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export default function Home() {
             transition={{ delay: 0.8, duration: 1.2 }}
             className="mt-16 text-xs md:text-sm text-primary font-sans max-w-xl mx-auto font-medium tracking-[0.4em] uppercase"
           >
-            A Private Escape Wrapped in Nature
+            A Peaceful Escape Beside the River
           </motion.p>
         </motion.div>
       </section>
@@ -68,8 +68,8 @@ export default function Home() {
               viewport={{ once: true, margin: "-10%" }}
               className="absolute right-0 bottom-0 md:bottom-10 w-[85%] md:w-[45%] h-[35vh] md:h-[45vh] bg-primary z-20 p-6 md:p-12 flex flex-col justify-end"
             >
-              <h2 className="text-4xl md:text-7xl font-serif text-teal-900 leading-none">THE<br />DUALITY</h2>
-              <p className="mt-6 md:mt-8 text-teal-900/80 font-sans text-[10px] md:text-xs tracking-[0.2em] font-medium uppercase">Ocean Movement vs Backwater Stillness</p>
+              <h2 className="text-4xl md:text-7xl font-serif text-teal-900 leading-none">THE<br />SETTING</h2>
+              <p className="mt-6 md:mt-8 text-teal-900/80 font-sans text-[10px] md:text-xs tracking-[0.2em] font-medium uppercase">River Calm vs Ocean Breeze</p>
             </motion.div>
 
           </div>
@@ -82,7 +82,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-2xl md:text-3xl font-serif leading-snug md:leading-relaxed text-[#041B1C]"
             >
-              On one side, the endless Arabian Sea. On the other, the slow-moving Udupi backwaters. In between—your private coastal sanctuary.
+              Set alongside the calm river, with the Arabian Sea just a short walk across the road.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -92,10 +92,10 @@ export default function Home() {
               className="flex flex-col gap-6"
             >
               <p className="text-sm md:text-base font-sans font-light text-[#041B1C] leading-loose tracking-wide">
-                TAM-BoSa Resort is an exclusive luxury homestay located in the serene coastal belt of Udupi, Karnataka. Designed for couples and those seeking a private escape, our beachfront property offers a rare geographical phenomenon: direct access to pristine ocean waves on one side, and the quiet, mirror-like stillness of tropical backwaters on the other.
+                TAM-BoSa Resort is a family-friendly homestay located in the beautiful coastal belt of Udupi, Karnataka. Designed for nature lovers and families seeking a quiet retreat, our property sits directly beside the slow-moving river, offering a peaceful atmosphere away from the rush.
               </p>
               <p className="text-sm md:text-base font-sans font-light text-[#041B1C] leading-loose tracking-wide">
-                Wake up to the rhythm of the tides, indulge in authentic local experiences, and retreat into absolute privacy away from the rush of the city.
+                With distinct architecture and dedicated service, you can relax by the water or take a brief 100-meter walk across the road to feel the ocean breeze on the beach.
               </p>
             </motion.div>
           </div>
@@ -112,20 +112,20 @@ export default function Home() {
             {[
               {
                 num: "01",
-                title: "Dual Views",
-                desc: "A front-row seat to nature at its most serene. Beach on one side, calming backwaters on the other.",
+                title: "River Views",
+                desc: "Relax by the water's edge right at the homestay, surrounded by soothing natural sounds.",
                 img: "/images/entrance.png"
               },
               {
                 num: "02",
-                title: "Lush Greenery",
-                desc: "Embraced by vibrant thickets for ultimate privacy and peace. This is not just a stay, it's a reset.",
+                title: "Thoughtful Spaces",
+                desc: "Designed with distinct architecture that creates a comfortable, welcoming environment for families to bond.",
                 img: "/images/garden.png"
               },
               {
                 num: "03",
-                title: "100 Steps",
-                desc: "Walkable pristine beach access. Sunrise strolls and sunset dips are an everyday luxury.",
+                title: "A Short Walk",
+                desc: "The beach is just 100 meters away across the road, making sunrise strolls simple and easy.",
                 img: "/images/sunset-view.png"
               }
             ].map((item, i) => (
@@ -160,7 +160,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-primary flex justify-center text-center px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl md:text-5xl font-serif text-teal-900 leading-tight mb-10">
-            Come experience a stay where the sea greets you.
+            Come spend a few days with us by the river.
           </h2>
           <motion.a
             href="/accommodations"
@@ -186,7 +186,7 @@ export default function Home() {
                 "name": "Where is TAM-BoSa Resort located?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "TAM-BoSa Resort is a luxury beachfront homestay located in Udupi, Karnataka, offering unique access to both the Arabian Sea and the serene backwaters."
+                  "text": "TAM-BoSa Resort is a riverside homestay located in Udupi, Karnataka, just a 100-meter walk across the road to the beach."
                 }
               },
               {
@@ -194,7 +194,7 @@ export default function Home() {
                 "name": "What type of accommodations does TAM-BoSa offer?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We offer premium accommodations including Oceanfront Suites with direct beach access and Backwater Villas surrounded by lush tropical greenery for ultimate privacy."
+                  "text": "We offer comfortable, family-friendly rooms designed with thoughtful architecture, providing a relaxing stay close to nature."
                 }
               }
             ]

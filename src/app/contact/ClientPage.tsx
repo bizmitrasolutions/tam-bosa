@@ -95,7 +95,7 @@ ${formData.message}`;
                             </div>
                             <div>
                                 <div className="text-[10px] uppercase tracking-[0.2em] text-teal-600 mb-1">Concierge</div>
-                                <div className="text-sm tracking-wide text-foreground/90">reservations@tam-bosa.com</div>
+                                <div className="text-sm tracking-wide text-foreground/90">tambosabeachretreat@gmail.com</div>
                             </div>
                         </div>
                         <div className="flex items-center gap-6 text-foreground/90 text-sm tracking-wide mt-4">

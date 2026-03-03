@@ -9,7 +9,7 @@ export function Footer() {
                         <img src="/logo.png" alt="TAM-BoSa Logo" className="h-12 w-auto object-contain" />
                     </Link>
                     <p className="text-[15px] text-foreground/70 leading-relaxed font-sans font-light">
-                        A private escape wrapped in nature. Where the sea greets you and backwaters lull you into peaceful evenings. Barefoot luxury, 100 steps from the ocean.
+                        A peaceful riverside retreat wrapped in nature. Family-friendly comfort with thoughtful architecture, just a short walk to the beach.
                     </p>
                 </div>
 

@@ -63,7 +63,7 @@ export default function RootLayout({
                 "description": "A luxury beachfront homestay located in Udupi, Karnataka, offering private oceanfront suites and backwater villas.",
                 "url": "https://tam-bosa.com",
                 "telephone": "+91 87222 11666",
-                "email": "reservations@tam-bosa.com",
+                "email": "tambosabeachretreat@gmail.com",
                 "address": {
                   "@type": "PostalAddress",
                   "addressLocality": "Udupi",
