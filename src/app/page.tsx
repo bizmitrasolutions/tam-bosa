@@ -15,18 +15,20 @@ export default function Home() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   return (
-    <div ref={containerRef} className="relative bg-[#041B1C]">
+    <div ref={containerRef} className="relative bg-[#041B1C] overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-[110vh] flex flex-col justify-center overflow-hidden">
         {/* Abstract Background Gradient & Image */}
-        <div className="absolute inset-0 z-0 bg-teal-950/20">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/images/outside-view.png"
-            alt="River view from TAM-BoSa"
+            alt="Sunrise river view from TAM-BoSa beachfront homestay in Udupi"
             fill
             className="object-cover object-center"
             priority
           />
+          {/* Dark Overlay for Text Readability - excluded top to not affect transparent navbar */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/70 z-10 pointer-events-none" />
         </div>
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
@@ -54,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* The Duality */}
-      <section className="relative min-h-[150vh] bg-foreground text-background py-20 md:py-40 px-6">
+      <section className="relative min-h-[150vh] bg-foreground text-background py-20 md:py-40 px-6 overflow-x-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="relative w-full h-[60vh] md:h-[80vh] flex flex-col justify-center">
 
@@ -66,8 +68,8 @@ export default function Home() {
               className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] z-10 overflow-hidden group"
             >
               <Image
-                src="/images/river-view.png"
-                alt="River view"
+                src="/images/delta-point.jpeg"
+                alt="Calm river and backwaters surrounding TAM-BoSa Resort Udupi"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-[10s]"
               />
@@ -126,7 +128,7 @@ export default function Home() {
                 num: "01",
                 title: "River Views",
                 desc: "Relax by the water's edge right at the homestay, surrounded by soothing natural sounds.",
-                img: "/images/entrance.png"
+                img: "/images/sunset-view.png"
               },
               {
                 num: "02",
@@ -138,7 +140,7 @@ export default function Home() {
                 num: "03",
                 title: "A Short Walk",
                 desc: "The beach is just 100 meters away across the road, making sunrise strolls simple and easy.",
-                img: "/images/sunset-view.png"
+                img: "/images/beach-view.jpeg"
               }
             ].map((item, i) => (
               <motion.div
@@ -147,20 +149,20 @@ export default function Home() {
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 transition={{ duration: 1, delay: 0.1 }}
                 viewport={{ once: true, margin: "-20%" }}
-                className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 relative ${i % 2 !== 0 ? "md:ml-auto md:flex-row-reverse" : "md:mr-auto"} max-w-5xl`}
+                className={`grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 relative ${i % 2 !== 0 ? "md:ml-auto" : "md:mr-auto"} max-w-5xl`}
               >
                 <div className={`text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 ${i % 2 === 0 ? "-right-4 md:-right-12 lg:-right-20" : "-left-2 md:-left-8 lg:-left-16"} z-0 mix-blend-screen select-none pointer-events-none`}>{item.num}</div>
 
-                <div className="w-full md:w-1/2 h-64 md:h-96 relative z-10 overflow-hidden group">
+                <div className={`w-full h-64 md:h-96 relative z-10 overflow-hidden group ${i % 2 !== 0 ? "md:order-last" : ""}`}>
                   <Image
                     src={item.img}
-                    alt={item.title}
+                    alt={`${item.title} at TAM-BoSa Riverside Retreat Udupi`}
                     fill
                     className="object-cover object-center group-hover:scale-110 transition-transform duration-[10s]"
                   />
                 </div>
 
-                <div className="pt-8 md:pt-0 md:w-1/2 relative z-10">
+                <div className="pt-8 md:pt-0 w-full relative z-10">
                   <h4 className="text-3xl md:text-4xl font-serif text-primary-soft mb-6">{item.title}</h4>
                   <p className="text-sm md:text-base text-foreground/90 font-light tracking-wide leading-loose">{item.desc}</p>
                 </div>

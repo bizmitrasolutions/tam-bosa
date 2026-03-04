@@ -52,7 +52,7 @@ function RoomCarousel({ images }: { images: string[] }) {
                         <div key={idx} className="w-full h-full flex-shrink-0 relative">
                             <Image
                                 src={img}
-                                alt={`Room view ${idx + 1}`}
+                                alt={`Luxury homestay room view ${idx + 1} at TAM-BoSa Beach Retreat Udupi`}
                                 fill
                                 className="object-cover object-center"
                                 priority={idx === 0}

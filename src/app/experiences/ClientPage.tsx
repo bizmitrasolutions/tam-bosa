@@ -77,7 +77,7 @@ export default function Experiences() {
                                 <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden group relative">
                                     <Image
                                         src={item.img}
-                                        alt={item.title}
+                                        alt={`${item.title} near TAM-BoSa Homestay Udupi`}
                                         fill
                                         className="object-cover object-center group-hover:scale-110 transition-transform duration-[10s]"
                                     />

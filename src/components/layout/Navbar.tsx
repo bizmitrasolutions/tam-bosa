@@ -7,6 +7,14 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { Menu, X } from "lucide-react";
 
+const NAV_LINKS = [
+    { href: "/", label: "Home" },
+    { href: "/accommodations", label: "Accommodations" },
+    { href: "/experiences", label: "Experiences" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/contact", label: "Contact" },
+];
+
 export function Navbar() {
     const { scrollY } = useScroll();
     const [hidden, setHidden] = useState(false);
@@ -38,28 +46,18 @@ export function Navbar() {
             <nav
                 className={`flex items-center justify-between w-full max-w-7xl px-8 py-4 transition-all duration-300 ${scrolled
                     ? "liquid-glass md:rounded-2xl"
-                    : "bg-transparent border-transparent"
+                    : "bg-black/10 backdrop-blur-sm border-transparent md:rounded-2xl"
                     }`}
             >
                 <Link href="/" className="flex items-center">
-                    <Image src="/logo.png" alt="TAM-BoSa Logo" width={160} height={40} className="h-10 w-auto object-contain" priority />
+                    <Image src="/logo.png" alt="TAM-BoSa Beach Retreat Udupi Logo" width={160} height={40} className="h-10 w-auto object-contain" priority />
                 </Link>
                 <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
-                    <Link href="/" className="hover:text-primary transition-colors">
-                        Home
-                    </Link>
-                    <Link href="/accommodations" className="hover:text-primary transition-colors">
-                        Accommodations
-                    </Link>
-                    <Link href="/experiences" className="hover:text-primary transition-colors">
-                        Experiences
-                    </Link>
-                    <Link href="/gallery" className="hover:text-primary transition-colors">
-                        Gallery
-                    </Link>
-                    <Link href="/contact" className="hover:text-primary transition-colors">
-                        Contact
-                    </Link>
+                    {NAV_LINKS.map(link => (
+                        <Link key={link.href} href={link.href} className="hover:text-primary transition-colors">
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
                 <button
                     onClick={openModal}
@@ -85,11 +83,16 @@ export function Navbar() {
                         transition={{ duration: 0.3 }}
                         className="md:hidden absolute top-full left-0 right-0 bg-[#041B1C]/95 backdrop-blur-lg border-b border-teal-900/50 flex flex-col items-center py-8 gap-6 shadow-2xl z-[60] overflow-hidden"
                     >
-                        <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Home</Link>
-                        <Link href="/accommodations" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Accommodations</Link>
-                        <Link href="/experiences" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Experiences</Link>
-                        <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Gallery</Link>
-                        <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors">Contact</Link>
+                        {NAV_LINKS.map(link => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors"
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
 
                         <button
                             onClick={() => { setMobileMenuOpen(false); openModal(); }}
