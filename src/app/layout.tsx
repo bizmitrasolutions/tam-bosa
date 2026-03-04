@@ -33,6 +33,26 @@ export const metadata: Metadata = {
     siteName: "TAM-BoSa Resort",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/garden.png",
+        width: 1200,
+        height: 630,
+        alt: "TAM-BoSa Beach Retreat Sunrise Entrance",
+      },
+      {
+        url: "/images/lobby.png",
+        width: 1200,
+        height: 630,
+        alt: "TAM-BoSa Oceanside View",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
+    description: "A private luxury beachfront retreat in Udupi, Karnataka. Experience the duality of ocean waves and calm backwaters.",
+    images: ["/images/garden.png"],
   },
   robots: {
     index: true,
