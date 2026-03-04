@@ -19,7 +19,7 @@ Develop a 5-page, high-conversion luxury website for TAM-BoSa Beach Retreat. The
 - **Animations:** Framer Motion - For complex scroll animations, reveals, and fluid transitions.
 - **Component Libraries:** Custom implementations inspired by Aceternity UI / Shadcn UI for a premium luxury feel without feeling templated.
 - **Icons:** Lucide React
-
+ 
 ## 5. File Structure
 ```
 /
