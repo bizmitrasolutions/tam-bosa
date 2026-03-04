@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -18,8 +19,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[110vh] flex flex-col justify-center overflow-hidden">
         {/* Abstract Background Gradient & Image */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('/images/outside-view.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 z-0 bg-teal-950/20">
+          <Image
+            src="/images/outside-view.png"
+            alt="River view from TAM-BoSa"
+            fill
+            className="object-cover object-center"
+            priority
+          />
         </div>
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
@@ -56,9 +63,14 @@ export default function Home() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
               viewport={{ once: true, margin: "-10%" }}
-              className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] z-10 overflow-hidden"
+              className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] z-10 overflow-hidden group"
             >
-              <div className="w-full h-full bg-[url('/images/river-view.png')] bg-cover bg-center hover:scale-105 transition-transform duration-[10s]" />
+              <Image
+                src="/images/river-view.png"
+                alt="River view"
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-[10s]"
+              />
             </motion.div>
 
             <motion.div
@@ -106,7 +118,7 @@ export default function Home() {
       <section className="relative py-20 md:py-40 lg:py-60 bg-[#041B1C] text-foreground px-6 overflow-hidden">
         <div className="absolute right-0 top-0 w-1/3 h-full bg-teal-900/20 blur-[100px] rounded-full mix-blend-screen pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10">
-          <h3 className="text-[10px] uppercase font-bold tracking-[0.4em] text-primary mb-20 md:mb-32 ml-4 md:ml-20">The Essence</h3>
+          <h3 className="text-xl md:text-2xl uppercase font-bold tracking-[0.4em] text-primary mb-20 md:mb-32 ml-4 md:ml-20">The Essence</h3>
 
           <div className="flex flex-col gap-28 md:gap-48">
             {[
@@ -137,12 +149,14 @@ export default function Home() {
                 viewport={{ once: true, margin: "-20%" }}
                 className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 relative ${i % 2 !== 0 ? "md:ml-auto md:flex-row-reverse" : "md:mr-auto"} max-w-5xl`}
               >
-                <div className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 -left-2 md:-left-8 lg:-left-16 z-0 mix-blend-screen select-none pointer-events-none">{item.num}</div>
+                <div className={`text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 ${i % 2 === 0 ? "-right-4 md:-right-12 lg:-right-20" : "-left-2 md:-left-8 lg:-left-16"} z-0 mix-blend-screen select-none pointer-events-none`}>{item.num}</div>
 
-                <div className="w-full md:w-1/2 h-64 md:h-96 relative z-10 overflow-hidden">
-                  <div
-                    className="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-[10s]"
-                    style={{ backgroundImage: `url(${item.img})` }}
+                <div className="w-full md:w-1/2 h-64 md:h-96 relative z-10 overflow-hidden group">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-cover object-center group-hover:scale-110 transition-transform duration-[10s]"
                   />
                 </div>
 
@@ -153,6 +167,93 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Guest Testimonials */}
+      <section className="relative py-24 md:py-40 bg-foreground text-background px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <h3 className="text-[10px] uppercase font-bold tracking-[0.4em] text-teal-700 mb-6">What Our Guests Say</h3>
+            <h2 className="text-3xl md:text-5xl font-serif text-[#041B1C] leading-tight">Moments That Stay</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                name: "Neha Narayankar",
+                text: "Amazing place to stay at.. if you're looking for peace of mind, surrounded by the calm nature.. serene river on one side and beach on the other, this is the place for you. Shakeel was an amazing host, very understanding and helpful. Rooms and the entire property are well maintained and very clean.",
+              },
+              {
+                name: "Naveen Kumar",
+                text: "The host, Mr. Shakil, is truly a gentleman with a very warm and humble personality. His property is located at a prime spot — in the morning, you can witness a beautiful sunrise right in front of the property, and by evening, you're treated to a stunning sunset just behind it.",
+              },
+              {
+                name: "Nikhil",
+                text: "Had a lovely stay here. Waking up to that view was a highlight… quiet mornings, lots of natural light, and a very relaxed vibe overall. The space was clean, well maintained, and thoughtfully set up. The owner Shakil bhai was extremely welcoming and courteous.",
+              },
+              {
+                name: "Hussain Tahhwa",
+                text: "A calm and beautiful stay with a unique river-facing view, while the beach lies just across on the opposite side. Very peaceful surroundings, clean rooms, and helpful staff. Ideal place to relax and unwind away from the city.",
+              },
+              {
+                name: "Pakhi Gupta",
+                text: "Perfect peaceful getaway! The backwater views are stunning and the beach is literally across the street. Shakeel was an amazing host. Those Mangalore buns at breakfast were incredible! Sunrise over the backwaters, sunset at the beach — pure magic.",
+              },
+              {
+                name: "Shaily",
+                text: "Everything is good. The owner is very nice, cooperative and helpful. Stunning view of backwaters with calming energy. You can see sunrise from your room.",
+              },
+            ].map((review, i) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                className="bg-[#041B1C]/5 border border-teal-900/10 p-8 md:p-10 flex flex-col justify-between gap-6 hover:bg-[#041B1C]/10 transition-colors duration-500"
+              >
+                <div>
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(5)].map((_, s) => (
+                      <svg key={s} className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm font-sans font-light text-[#041B1C]/80 leading-relaxed tracking-wide">
+                    &ldquo;{review.text}&rdquo;
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-teal-900/10">
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#041B1C]">{review.name}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-center mt-12 md:mt-16"
+          >
+            <a
+              href="https://www.google.com/maps/place/TAM-BoSa+Beach+Retreat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 border border-teal-900/30 text-[#041B1C]/70 hover:text-[#041B1C] hover:border-teal-900/60 text-xs uppercase tracking-[0.3em] font-semibold transition-all duration-300"
+            >
+              Read More Reviews on Google Maps →
+            </a>
+          </motion.div>
         </div>
       </section>
 

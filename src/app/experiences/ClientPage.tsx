@@ -1,28 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ACTIVITIES = [
     {
         phase: "Nature & Water",
         time: "Nearby",
-        title: "Boating & Kayaking",
-        desc: "Explore the gentle currents of the Udupi river right next to the homestay. We can help arrange boating and kayaking sessions with local operators.",
-        img: "/images/river-view.png"
+        title: "Kayaking",
+        desc: "Glide through the serene river waters right beside the homestay. Kayaking sessions can be arranged with local operators for a peaceful exploration of the calm backwaters and surrounding mangroves.",
+        img: "/images/kayaking.png"
     },
     {
-        phase: "Beach Excursions",
+        phase: "Adventure & Thrills",
         time: "Nearby",
-        title: "Delta Beach Visits",
-        desc: "Take a short trip to Delta Beach, a stunning local spot where the river meets the sea, perfect for evening sunsets and coastal photography.",
-        img: "/images/entrance-2.png"
+        title: "Jet-ski",
+        desc: "Feel the rush of the Arabian Sea with an exhilarating jet-ski ride along the Udupi coastline. Perfect for those seeking a dose of adrenaline during their stay.",
+        img: "/images/jet-ski.png"
     },
     {
-        phase: "Local Discoveries",
+        phase: "Scenic Excursions",
         time: "Nearby",
-        title: "Udupi Culture",
-        desc: "Venture out to experience authentic Udupi heritage, local temples, and famous regional cuisine just a short drive from the property.",
-        img: "/images/sunset-view.png"
+        title: "Boat Ride",
+        desc: "Drift along the gentle river on a traditional boat ride, soaking in panoramic views of lush greenery and coastal beauty. An ideal way to unwind and connect with nature.",
+        img: "/images/boat-ride.png"
     }
 ];
 
@@ -73,10 +74,12 @@ export default function Experiences() {
                                     </div>
                                 </div>
 
-                                <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden">
-                                    <div
-                                        className="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
-                                        style={{ backgroundImage: `url(${item.img})` }}
+                                <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden group relative">
+                                    <Image
+                                        src={item.img}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover object-center group-hover:scale-110 transition-transform duration-[10s]"
                                     />
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useContactModal } from "@/contexts/ContactModalContext";
 import { Menu, X } from "lucide-react";
@@ -41,7 +42,7 @@ export function Navbar() {
                     }`}
             >
                 <Link href="/" className="flex items-center">
-                    <img src="/logo.png" alt="TAM-BoSa Logo" className="h-10 w-auto object-contain" />
+                    <Image src="/logo.png" alt="TAM-BoSa Logo" width={160} height={40} className="h-10 w-auto object-contain" priority />
                 </Link>
                 <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
                     <Link href="/" className="hover:text-primary transition-colors">

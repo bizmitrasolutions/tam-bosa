@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { ChevronDown, Wind, Wifi, Coffee, Bath, Tv, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import { useContactModal } from "@/contexts/ContactModalContext";
 
 const FAQ = [
@@ -14,16 +15,85 @@ const FAQ = [
 
 const ROOMS = [
     {
-        name: "Oceanfront Suite",
-        desc: "A comfortable, beautifully designed suite offering views towards the Arabian Sea. Features include a cozy bed, well-planned architecture, and easy access to the beach just across the road. Enjoy our dedicated service throughout your stay.",
-        img: "/images/bedroom.png"
-    },
-    {
-        name: "Backwater Villa",
-        desc: "A serene room situated closer to the quiet river, framed by natural greenery. Designed for families and nature lovers, it offers a peaceful retreat with thoughtful aesthetics and warm hospitality.",
-        img: "/images/bedroom-4.png"
+        name: "Riverside Guest Rooms",
+        desc: "Comfortable, beautifully designed rooms situated by the quiet river, framed by natural greenery. Designed for families and nature lovers, each room offers a peaceful retreat with thoughtful aesthetics, cozy beds, warm hospitality, and easy access to the beach just across the road.",
+        images: [
+            "/images/bedroom-8.png",
+            "/images/bedroom-4.png",
+            "/images/bedroom-5.png",
+            "/images/bedroom-7.png",
+            "/images/washroom.png"
+        ]
     }
 ];
+
+function RoomCarousel({ images }: { images: string[] }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Optional autoplay
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % images.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, [images.length]);
+
+    const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
+    const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+
+    return (
+        <div className="w-full h-full relative group">
+            <div className="w-full h-full overflow-hidden relative">
+                <motion.div
+                    className="flex w-full h-full transition-transform duration-700 ease-[0.16,1,0.3,1]"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                >
+                    {images.map((img, idx) => (
+                        <div key={idx} className="w-full h-full flex-shrink-0 relative">
+                            <Image
+                                src={img}
+                                alt={`Room view ${idx + 1}`}
+                                fill
+                                className="object-cover object-center"
+                                priority={idx === 0}
+                            />
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
+
+            {images.length > 1 && (
+                <>
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/20 hover:bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    >
+                        <ChevronLeft size={24} strokeWidth={1.5} />
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/20 hover:bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    >
+                        <ChevronRight size={24} strokeWidth={1.5} />
+                    </button>
+                </>
+            )}
+
+            {images.length > 1 && (
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+                    {images.map((_, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => setCurrentIndex(idx)}
+                            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${currentIndex === idx ? "bg-white" : "bg-white/40 hover:bg-white/60"
+                                }`}
+                        />
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+}
 
 export default function Accommodations() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -57,10 +127,7 @@ export default function Accommodations() {
                                 transition={{ duration: 1.2, ease: "easeOut" }}
                                 className="w-full md:w-3/5 h-[40vh] md:h-[70vh] overflow-hidden relative"
                             >
-                                <div
-                                    className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-[8s]"
-                                    style={{ backgroundImage: `url(${room.img})` }}
-                                />
+                                <RoomCarousel images={room.images} />
                             </motion.div>
 
                             <motion.div
@@ -82,6 +149,45 @@ export default function Accommodations() {
                             </motion.div>
                         </div>
                     ))}
+                </div>
+
+                {/* Amenities Section */}
+                <div className="max-w-5xl mx-auto mt-24 md:mt-40 mb-24 md:mb-40">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                        className="text-center mb-16"
+                    >
+                        <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4">Room Amenities</h3>
+                        <p className="text-sm text-foreground/60 font-sans tracking-widest font-light uppercase">Everything you need for a comfortable stay</p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+                        {[
+                            { icon: <Wind className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />, label: "Air Conditioning" },
+                            { icon: <Wifi className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />, label: "Complimentary Wi-Fi" },
+                            { icon: <Bath className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />, label: "En-suite Bathroom" },
+                            { icon: <Coffee className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />, label: "Tea & Coffee" },
+                            { icon: <Tv className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />, label: "Smart TV" },
+                            { icon: <MapPin className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />, label: "River & Beach Access" },
+                        ].map((amenity, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                                className="flex flex-col items-center justify-center text-center gap-4 p-6 bg-teal-900/10 border border-teal-800/20 hover:bg-teal-900/20 transition-colors"
+                            >
+                                <div className="text-primary-soft">
+                                    {amenity.icon}
+                                </div>
+                                <span className="font-sans text-sm md:text-base font-light tracking-wide text-foreground/80">{amenity.label}</span>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Guest Q&A */}
@@ -130,6 +236,45 @@ export default function Accommodations() {
                         })
                     }}
                 />
+
+                {/* House Rules & Policies */}
+                <div className="max-w-3xl mx-auto mt-24 md:mt-40 mb-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                        className="text-center mb-10 md:mb-16"
+                    >
+                        <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4">House Rules & Policies</h3>
+                        <p className="text-sm text-foreground/60 font-sans tracking-widest font-light uppercase">For a comfortable stay for everyone</p>
+                    </motion.div>
+
+                    <div className="flex flex-col gap-6">
+                        {[
+                            { rule: "Check-in from 2:00 PM — Check-out by 11:00 AM" },
+                            { rule: "Quiet hours are observed from 10:00 PM to 7:00 AM" },
+                            { rule: "Smoking is not permitted inside the rooms or common indoor areas" },
+                            { rule: "Pets are not allowed on the property" },
+                            { rule: "Guests are responsible for any damage to the property during their stay" },
+                            { rule: "Cancellations made 48 hours before check-in are eligible for a full refund. No-shows or late cancellations are non-refundable" },
+                            { rule: "Valid government-issued photo ID is required at check-in for all adult guests" },
+                            { rule: "Outside visitors are not permitted without prior approval from the host" },
+                        ].map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                                className="flex items-start gap-4 py-4 border-b border-teal-800/20 last:border-b-0"
+                            >
+                                <span className="text-primary text-lg mt-0.5 select-none">•</span>
+                                <p className="text-sm text-foreground/80 font-light leading-relaxed tracking-wide">{item.rule}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
 
             </div>
         </div>

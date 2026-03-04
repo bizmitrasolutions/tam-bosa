@@ -110,7 +110,7 @@ ${formData.message}`;
                         <div>
                             <h3 className="text-[10px] uppercase tracking-[0.2em] text-teal-600 mb-4">Follow us</h3>
                             <div className="flex gap-4">
-                                <a href="#" className="w-10 h-10 rounded-full border border-teal-800 flex items-center justify-center hover:bg-primary hover:text-[#041B1C] transition-colors">
+                                <a href="https://www.instagram.com/tambosa.beachstays?igsh=aXRpZTA3NWFqemQ5" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-teal-800 flex items-center justify-center hover:bg-primary hover:text-[#041B1C] transition-colors">
                                     <Instagram size={16} />
                                 </a>
                                 <a href="#" className="w-10 h-10 rounded-full border border-teal-800 flex items-center justify-center hover:bg-primary hover:text-[#041B1C] transition-colors">

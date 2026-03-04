@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
     return (
@@ -6,7 +7,7 @@ export function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16 relative z-10">
                 <div className="max-w-md">
                     <Link href="/" className="inline-block mb-6">
-                        <img src="/logo.png" alt="TAM-BoSa Logo" className="h-12 w-auto object-contain" />
+                        <Image src="/logo.png" alt="TAM-BoSa Logo" width={200} height={48} className="h-12 w-auto object-contain" />
                     </Link>
                     <p className="text-[15px] text-foreground/70 leading-relaxed font-sans font-light">
                         A peaceful riverside retreat wrapped in nature. Family-friendly comfort with thoughtful architecture, just a short walk to the beach.
@@ -33,8 +34,8 @@ export function Footer() {
             <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-teal-900/50 flex flex-col md:flex-row justify-between items-center text-xs text-foreground/40 font-light tracking-wider">
                 <p>© {new Date().getFullYear()} TAM-BoSa Beach Retreat. All rights reserved.</p>
                 <div className="flex gap-8 mt-6 md:mt-0">
-                    <span className="hover:text-primary/70 cursor-pointer transition-colors">Privacy Policy</span>
-                    <span className="hover:text-primary/70 cursor-pointer transition-colors">Terms of Service</span>
+                    <Link href="/privacy-policy" className="hover:text-primary/70 transition-colors">Privacy Policy</Link>
+                    <Link href="/terms" className="hover:text-primary/70 transition-colors">Terms of Service</Link>
                 </div>
             </div>
         </footer>
