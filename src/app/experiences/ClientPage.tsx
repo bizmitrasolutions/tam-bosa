@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 
 const ACTIVITIES = [
     {
@@ -9,21 +9,21 @@ const ACTIVITIES = [
         time: "Nearby",
         title: "Kayaking",
         desc: "Glide through the serene river waters right beside the homestay. Kayaking sessions can be arranged with local operators for a peaceful exploration of the calm backwaters and surrounding mangroves.",
-        img: "/images/kayaking.png"
+        img: "/images/kayaking.webp"
     },
     {
         phase: "Adventure & Thrills",
         time: "Nearby",
         title: "Jet-ski",
         desc: "Feel the rush of the Arabian Sea with an exhilarating jet-ski ride along the Udupi coastline. Perfect for those seeking a dose of adrenaline during their stay.",
-        img: "/images/jet-ski.png"
+        img: "/images/jet-ski.webp"
     },
     {
         phase: "Scenic Excursions",
         time: "Nearby",
         title: "Boat Ride",
         desc: "Drift along the gentle river on a traditional boat ride, soaking in panoramic views of lush greenery and coastal beauty. An ideal way to unwind and connect with nature.",
-        img: "/images/boat-ride.png"
+        img: "/images/boat-ride.webp"
     }
 ];
 
@@ -75,7 +75,7 @@ export default function Experiences() {
                                 </div>
 
                                 <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden group relative">
-                                    <Image
+                                    <OptimizedImage
                                         src={item.img}
                                         alt={`${item.title} near TAM-BoSa Homestay Udupi`}
                                         fill

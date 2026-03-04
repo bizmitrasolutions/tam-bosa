@@ -3,41 +3,42 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn } from "lucide-react";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 
 type Category = "All" | "Accommodations" | "Views" | "Common Areas" | "Experiences";
 
 const IMAGES: { src: string; alt: string; category: Category }[] = [
     // Accommodations 
-    { src: "/images/bedroom.png", alt: "Cozy bedroom interior at TAM-BoSa", category: "Accommodations" },
-    { src: "/images/bedroom-2.png", alt: "TAM-BoSa beachfront view with ocean waves", category: "Accommodations" },
-    { src: "/images/bedroom-3.png", alt: "Premium bedroom with natural lighting", category: "Accommodations" },
-    { src: "/images/bedroom-4.png", alt: "Spacious bedroom interior", category: "Accommodations" },
-    { src: "/images/bedroom-5.png", alt: "Comfortable bedroom setup", category: "Accommodations" },
-    { src: "/images/bedroom-6.png", alt: "Elegant bedroom design", category: "Accommodations" },
-    { src: "/images/bedroom-7.png", alt: "Premium Oceanfront suite bedroom interior", category: "Accommodations" },
-    { src: "/images/bedroom-8.png", alt: "Luxurious bedroom features", category: "Accommodations" },
-    { src: "/images/washroom.png", alt: "Clean and modern washroom at TAM-BoSa homestay", category: "Accommodations" },
+    { src: "/images/bedroom.webp", alt: "Cozy bedroom interior at TAM-BoSa", category: "Accommodations" },
+    { src: "/images/bedroom-2.webp", alt: "TAM-BoSa beachfront view with ocean waves", category: "Accommodations" },
+    { src: "/images/bedroom-3.webp", alt: "Premium bedroom with natural lighting", category: "Accommodations" },
+    { src: "/images/bedroom-4.webp", alt: "Spacious bedroom interior", category: "Accommodations" },
+    { src: "/images/bedroom-5.webp", alt: "Comfortable bedroom setup", category: "Accommodations" },
+    { src: "/images/bedroom-6.webp", alt: "Elegant bedroom design", category: "Accommodations" },
+    { src: "/images/bedroom-7.webp", alt: "Premium Oceanfront suite bedroom interior", category: "Accommodations" },
+    { src: "/images/bedroom-8.webp", alt: "Luxurious bedroom features", category: "Accommodations" },
+    { src: "/images/washroom.webp", alt: "Clean and modern washroom at TAM-BoSa homestay", category: "Accommodations" },
 
     // Views
-    { src: "/images/beach-view.jpeg", alt: "Stunning beach view from the retreat", category: "Views" },
-    { src: "/images/delta-point.jpeg", alt: "Scenic delta point view", category: "Views" },
-    { src: "/images/garden.png", alt: "Lush green garden area", category: "Views" },
-    { src: "/images/outside-view.png", alt: "Exterior view of the property", category: "Views" },
-    { src: "/images/river-view.jpeg", alt: "Calm river view", category: "Views" },
-    { src: "/images/sunset-view.png", alt: "Breathtaking sunset view", category: "Views" },
+    { src: "/images/beach-view.webp", alt: "Stunning beach view from the retreat", category: "Views" },
+    { src: "/images/delta-point.webp", alt: "Scenic delta point view", category: "Views" },
+    { src: "/images/garden.webp", alt: "Lush green garden area", category: "Views" },
+    { src: "/images/outside-view.webp", alt: "Exterior view of the property", category: "Views" },
+    { src: "/images/river-view.webp", alt: "Calm river view", category: "Views" },
+    { src: "/images/sunset-view.webp", alt: "Breathtaking sunset view", category: "Views" },
 
     // Common Areas
-    { src: "/images/entrance.png", alt: "Serene morning view of the beach retreat entrance", category: "Common Areas" },
-    { src: "/images/entrance-2.png", alt: "Welcoming entrance to TAM-BoSa", category: "Common Areas" },
-    { src: "/images/lobby.png", alt: "Luxury coastal dining setup at sunset", category: "Common Areas" },
-    { src: "/images/sitting-area.png", alt: "Comfortable sitting area at TAM-BoSa homestay Udupi", category: "Common Areas" },
-    { src: "/images/sitting-area-2.png", alt: "Relaxing sitting lounge", category: "Common Areas" },
-    { src: "/images/sitting-area-3.png", alt: "Spacious sitting and gathering area", category: "Common Areas" },
+    { src: "/images/entrance.webp", alt: "Serene morning view of the beach retreat entrance", category: "Common Areas" },
+    { src: "/images/entrance-2.webp", alt: "Welcoming entrance to TAM-BoSa", category: "Common Areas" },
+    { src: "/images/lobby.webp", alt: "Luxury coastal dining setup at sunset", category: "Common Areas" },
+    { src: "/images/sitting-area.webp", alt: "Comfortable sitting area at TAM-BoSa homestay Udupi", category: "Common Areas" },
+    { src: "/images/sitting-area-2.webp", alt: "Relaxing sitting lounge", category: "Common Areas" },
+    { src: "/images/sitting-area-3.webp", alt: "Spacious sitting and gathering area", category: "Common Areas" },
 
     // Experiences
-    { src: "/images/boat-ride.png", alt: "Exciting boat ride experience", category: "Experiences" },
-    { src: "/images/jet-ski.png", alt: "Thrilling jet ski adventure", category: "Experiences" },
-    { src: "/images/kayaking.png", alt: "Kayaking along the serene waters", category: "Experiences" }
+    { src: "/images/boat-ride.webp", alt: "Exciting boat ride experience", category: "Experiences" },
+    { src: "/images/jet-ski.webp", alt: "Thrilling jet ski adventure", category: "Experiences" },
+    { src: "/images/kayaking.webp", alt: "Kayaking along the serene waters", category: "Experiences" }
 ];
 
 const CATEGORIES: Category[] = ["All", "Accommodations", "Views", "Common Areas", "Experiences"];
@@ -129,10 +130,12 @@ export default function Gallery() {
                                 onClick={() => setSelectedId(img.src)}
                                 className={`relative overflow-hidden cursor-pointer group ${getSpan(i)}`}
                             >
-                                <motion.img
+                                <OptimizedImage
                                     src={img.src}
                                     alt={img.alt}
-                                    className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-110"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover transition-transform duration-[6s] group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <ZoomIn className="text-primary w-10 h-10" strokeWidth={1} />
@@ -166,10 +169,12 @@ export default function Gallery() {
                             layoutId={`img-container-${selectedId}`}
                             className="relative z-20 w-[90vw] md:w-[75vw] h-[80vh] flex items-center justify-center"
                         >
-                            <img
-                                src={getSelectedImage()?.src}
+                            <OptimizedImage
+                                src={getSelectedImage()?.src || ""}
                                 alt={getSelectedImage()?.alt || "Expanded view"}
-                                className="w-full h-full object-contain"
+                                fill
+                                sizes="100vw"
+                                className="object-contain"
                             />
                         </motion.div>
                     </div>

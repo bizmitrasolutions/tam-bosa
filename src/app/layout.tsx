@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Cormorant, Montserrat } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { MobileStickyCTA } from "@/components/ui/MobileStickyCTA";
 import { ContactModalProvider } from "@/contexts/ContactModalContext";
 import { ContactModal } from "@/components/ui/ContactModal";
 import "./globals.css";
@@ -36,13 +35,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-garden.jpg",
+        url: "/images/og-garden.webp",
         width: 1200,
         height: 630,
         alt: "TAM-BoSa Beach Retreat Sunrise Entrance",
       },
       {
-        url: "/images/og-lobby.jpg",
+        url: "/images/og-lobby.webp",
         width: 1200,
         height: 630,
         alt: "TAM-BoSa Oceanside View",
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
     description: "A private luxury beachfront retreat in Udupi, Karnataka. Experience the duality of ocean waves and calm backwaters.",
-    images: ["/images/og-garden.jpg"],
+    images: ["/images/og-garden.webp"],
   },
   robots: {
     index: true,
@@ -106,7 +105,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <MobileStickyCTA />
           <ContactModal />
         </ContactModalProvider>
       </body>

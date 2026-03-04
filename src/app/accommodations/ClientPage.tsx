@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 import { ChevronDown, Wind, Wifi, Coffee, Bath, Tv, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import { useContactModal } from "@/contexts/ContactModalContext";
 
@@ -18,11 +18,11 @@ const ROOMS = [
         name: "Riverside Guest Rooms",
         desc: "Comfortable, beautifully designed rooms situated by the quiet river, framed by natural greenery. Designed for families and nature lovers, each room offers a peaceful retreat with thoughtful aesthetics, cozy beds, warm hospitality, and easy access to the beach just across the road.",
         images: [
-            "/images/bedroom-8.png",
-            "/images/bedroom-4.png",
-            "/images/bedroom-5.png",
-            "/images/bedroom-7.png",
-            "/images/washroom.png"
+            "/images/bedroom-8.webp",
+            "/images/bedroom-4.webp",
+            "/images/bedroom-5.webp",
+            "/images/bedroom-7.webp",
+            "/images/washroom.webp"
         ]
     }
 ];
@@ -50,7 +50,7 @@ function RoomCarousel({ images }: { images: string[] }) {
                 >
                     {images.map((img, idx) => (
                         <div key={idx} className="w-full h-full flex-shrink-0 relative">
-                            <Image
+                            <OptimizedImage
                                 src={img}
                                 alt={`Luxury homestay room view ${idx + 1} at TAM-BoSa Beach Retreat Udupi`}
                                 fill
@@ -150,6 +150,35 @@ export default function Accommodations() {
                         </div>
                     ))}
                 </div>
+
+                {/* Book on OTA Platforms */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-3xl mx-auto mt-16 md:mt-24 text-center"
+                >
+                    <p className="text-[10px] uppercase tracking-[0.4em] text-foreground/40 font-sans font-medium mb-5">Also available on</p>
+                    <div className="flex items-center justify-center gap-8 md:gap-12">
+                        {[
+                            { logo: "/images/ota/MakeMyTrip/MakeMyTrip_idD023S7dF_2.svg", alt: "MakeMyTrip", href: "https://app.mmyt.co/Xm2V/83t03c2f" },
+                            { logo: "/images/ota/Booking.com/Booking.com_Logo_6.svg", alt: "Booking.com", href: "https://www.booking.com/hotel/in/tam-bosa-beach-retreat.en-gb.html" },
+                            { logo: "/images/ota/Agoda/Agoda_Logo_3.svg", alt: "Agoda", href: "https://www.agoda.com/en-sg/tam-bosa-beach-retreat/hotel/varamballi-in.html" },
+                        ].map((platform) => (
+                            <a
+                                key={platform.alt}
+                                href={platform.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="opacity-50 hover:opacity-100 transition-opacity duration-300"
+                            >
+                                <img src={platform.logo} alt={`Book TAM-BoSa on ${platform.alt}`} className="h-5 md:h-7 w-auto" />
+                            </a>
+                        ))}
+                    </div>
+                    <div className="mt-6 w-16 h-px bg-teal-800/40 mx-auto" />
+                </motion.div>
 
                 {/* Amenities Section */}
                 <div className="max-w-5xl mx-auto mt-24 md:mt-40 mb-24 md:mb-40">

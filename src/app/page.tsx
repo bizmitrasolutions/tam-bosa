@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -20,8 +20,8 @@ export default function Home() {
       <section className="relative h-[110vh] flex flex-col justify-center overflow-hidden">
         {/* Abstract Background Gradient & Image */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/outside-view.png"
+          <OptimizedImage
+            src="/images/outside-view.webp"
             alt="Sunrise river view from TAM-BoSa beachfront homestay in Udupi"
             fill
             className="object-cover object-center"
@@ -67,8 +67,8 @@ export default function Home() {
               viewport={{ once: true, margin: "-10%" }}
               className="absolute left-0 top-0 md:top-0 w-[95%] md:w-[65%] h-[40vh] md:h-[50vh] z-10 overflow-hidden group"
             >
-              <Image
-                src="/images/delta-point.jpeg"
+              <OptimizedImage
+                src="/images/delta-point.webp"
                 alt="Calm river and backwaters surrounding TAM-BoSa Resort Udupi"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-[10s]"
@@ -128,19 +128,19 @@ export default function Home() {
                 num: "01",
                 title: "River Views",
                 desc: "Relax by the water's edge right at the homestay, surrounded by soothing natural sounds.",
-                img: "/images/sunset-view.png"
+                img: "/images/sunset-view.webp"
               },
               {
                 num: "02",
                 title: "Thoughtful Spaces",
                 desc: "Designed with distinct architecture that creates a comfortable, welcoming environment for families to bond.",
-                img: "/images/garden.png"
+                img: "/images/garden.webp"
               },
               {
                 num: "03",
                 title: "A Short Walk",
                 desc: "The beach is just 100 meters away across the road, making sunrise strolls simple and easy.",
-                img: "/images/beach-view.jpeg"
+                img: "/images/beach-view.webp"
               }
             ].map((item, i) => (
               <motion.div
@@ -154,7 +154,7 @@ export default function Home() {
                 <div className={`text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] font-serif text-teal-800/30 leading-none absolute -top-8 md:-top-16 lg:-top-24 ${i % 2 === 0 ? "-right-4 md:-right-12 lg:-right-20" : "-left-2 md:-left-8 lg:-left-16"} z-0 mix-blend-screen select-none pointer-events-none`}>{item.num}</div>
 
                 <div className={`w-full h-64 md:h-96 relative z-10 overflow-hidden group ${i % 2 !== 0 ? "md:order-last" : ""}`}>
-                  <Image
+                  <OptimizedImage
                     src={item.img}
                     alt={`${item.title} at TAM-BoSa Riverside Retreat Udupi`}
                     fill
@@ -257,6 +257,36 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
+      </section>
+
+      {/* Trusted Platforms Strip */}
+      <section className="py-10 md:py-14 bg-[#041B1C] border-t border-teal-900/30 px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto flex flex-col items-center gap-5"
+        >
+          <span className="text-[10px] uppercase tracking-[0.4em] text-foreground/40 font-sans font-medium">Trusted On</span>
+          <div className="flex items-center gap-8 md:gap-12">
+            {[
+              { logo: "/images/ota/MakeMyTrip/MakeMyTrip_idD023S7dF_2.svg", alt: "MakeMyTrip", href: "https://app.mmyt.co/Xm2V/83t03c2f" },
+              { logo: "/images/ota/Booking.com/Booking.com_Logo_6.svg", alt: "Booking.com", href: "https://www.booking.com/hotel/in/tam-bosa-beach-retreat.en-gb.html" },
+              { logo: "/images/ota/Agoda/Agoda_Logo_3.svg", alt: "Agoda", href: "https://www.agoda.com/en-sg/tam-bosa-beach-retreat/hotel/varamballi-in.html" },
+            ].map((platform) => (
+              <a
+                key={platform.alt}
+                href={platform.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-50 hover:opacity-100 transition-opacity duration-300"
+              >
+                <img src={platform.logo} alt={`Book TAM-BoSa on ${platform.alt}`} className="h-5 md:h-7 w-auto" />
+              </a>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* Outro CTA */}

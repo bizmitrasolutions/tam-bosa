@@ -50,24 +50,24 @@ export function Navbar() {
                     }`}
             >
                 <Link href="/" className="flex items-center">
-                    <Image src="/logo.png" alt="TAM-BoSa Beach Retreat Udupi Logo" width={160} height={40} className="h-10 w-auto object-contain" priority />
+                    <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={160} height={40} className="h-10 w-auto object-contain" priority />
                 </Link>
                 <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
                     {NAV_LINKS.map(link => (
-                        <Link key={link.href} href={link.href} className="hover:text-primary transition-colors">
+                        <Link key={link.href} href={link.href} className="hover:text-primary transition-colors py-2 px-1">
                             {link.label}
                         </Link>
                     ))}
                 </div>
                 <button
                     onClick={openModal}
-                    className="hidden md:block px-7 py-2.5 bg-primary text-background hover:bg-primary-soft transition-colors font-semibold text-sm rounded-sm"
+                    className="hidden md:flex min-h-[44px] items-center justify-center px-7 bg-primary text-background hover:bg-primary-soft transition-colors font-semibold text-sm rounded-sm"
                 >
                     Reserve
                 </button>
                 <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="md:hidden text-foreground hover:text-primary transition-colors focus:outline-none"
+                    className="md:hidden w-11 h-11 flex items-center justify-center -mr-2 text-foreground hover:text-primary transition-colors focus:outline-none"
                     aria-label="Toggle Menu"
                 >
                     {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -88,7 +88,7 @@ export function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors"
+                                className="flex items-center justify-center w-full min-h-[44px] text-foreground/80 hover:text-primary uppercase tracking-widest text-sm font-medium transition-colors"
                             >
                                 {link.label}
                             </Link>
@@ -96,7 +96,7 @@ export function Navbar() {
 
                         <button
                             onClick={() => { setMobileMenuOpen(false); openModal(); }}
-                            className="mt-4 px-10 py-3 bg-primary text-background font-semibold uppercase tracking-widest text-xs rounded-sm hover:bg-primary-soft transition-colors"
+                            className="mt-4 px-10 min-h-[44px] flex items-center justify-center bg-primary text-background font-semibold uppercase tracking-widest text-xs rounded-sm hover:bg-primary-soft transition-colors"
                         >
                             Reserve Now
                         </button>

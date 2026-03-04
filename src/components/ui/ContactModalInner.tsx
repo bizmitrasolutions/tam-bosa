@@ -72,7 +72,7 @@ ${formData.message}`;
                     <h2 className="text-2xl font-serif text-primary">Inquiry Form</h2>
                     <button
                         onClick={closeModal}
-                        className="text-foreground/50 hover:text-foreground transition-colors p-2"
+                        className="text-foreground/50 hover:text-foreground w-11 h-11 flex items-center justify-center -mr-2 transition-colors"
                     >
                         <X size={24} />
                     </button>
@@ -87,7 +87,7 @@ ${formData.message}`;
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3 text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3.5 min-h-[44px] text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
                             placeholder="Jane Doe"
                         />
                     </div>
@@ -105,7 +105,7 @@ ${formData.message}`;
                                     }}
                                     minDate={new Date()}
                                     placeholderText="Select dates"
-                                    className="w-full bg-teal-950/30 border border-teal-800/50 rounded-md p-3 pl-10 text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+                                    className="w-full bg-teal-950/30 border border-teal-800/50 rounded-md p-3.5 min-h-[44px] pl-10 text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
                                     wrapperClassName="w-full"
                                 />
                                 <CalendarIcon size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-teal-600 pointer-events-none" />
@@ -117,7 +117,7 @@ ${formData.message}`;
                                 name="guests"
                                 value={formData.guests}
                                 onChange={handleChange}
-                                className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3 text-sm text-foreground focus:outline-none focus:border-primary transition-colors appearance-none"
+                                className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3.5 min-h-[44px] text-sm text-foreground focus:outline-none focus:border-primary transition-colors appearance-none"
                             >
                                 <option value="1">1 Guest</option>
                                 <option value="2">2 Guests</option>
@@ -133,7 +133,7 @@ ${formData.message}`;
                             name="room"
                             value={formData.room}
                             onChange={handleChange}
-                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3 text-sm text-foreground focus:outline-none focus:border-primary transition-colors appearance-none"
+                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3.5 min-h-[44px] text-sm text-foreground focus:outline-none focus:border-primary transition-colors appearance-none"
                         >
                             <option value="Oceanfront Suite">Oceanfront Suite</option>
                             <option value="Backwater Villa">Backwater Villa</option>
@@ -148,14 +148,14 @@ ${formData.message}`;
                             rows={3}
                             value={formData.message}
                             onChange={handleChange}
-                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3 text-sm text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3.5 min-h-[44px] text-sm text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
                             placeholder="Any special requests or details we should know?"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="mt-4 w-full py-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-serif tracking-wider text-sm rounded-md transition-colors shadow-lg"
+                        className="mt-6 w-full py-4 bg-primary hover:bg-primary/90 text-background font-serif tracking-[0.15em] uppercase text-sm rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                     >
                         Continue to WhatsApp
                     </button>

@@ -5,7 +5,8 @@ const EXPLORE_LINKS = [
     { href: "/", label: "Home" },
     { href: "/accommodations", label: "Accommodations" },
     { href: "/experiences", label: "Experiences" },
-    { href: "/gallery", label: "Gallery" }
+    { href: "/gallery", label: "Gallery" },
+    { href: "/blog", label: "Travel Guide" }
 ];
 
 const LEGAL_LINKS = [
@@ -19,7 +20,7 @@ export function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10 md:gap-16 relative z-10">
                 <div className="max-w-md">
                     <Link href="/" className="inline-block mb-4">
-                        <Image src="/logo.png" alt="TAM-BoSa Beach Retreat Udupi Logo" width={200} height={48} className="h-10 w-auto object-contain" />
+                        <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={200} height={48} className="h-10 w-auto object-contain" />
                     </Link>
                     <p className="text-[14px] text-foreground/70 leading-relaxed font-sans font-light">
                         A peaceful riverside retreat wrapped in nature. Family-friendly comfort with thoughtful architecture, just a short walk to the beach.
@@ -30,7 +31,7 @@ export function Footer() {
                     <div className="flex flex-col gap-4">
                         <h4 className="font-serif text-base tracking-wider text-primary-soft uppercase">Explore</h4>
                         {EXPLORE_LINKS.map(link => (
-                            <Link key={link.href} href={link.href} className="text-[13px] text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest">
+                            <Link key={link.href} href={link.href} className="inline-block py-2 text-[13px] text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest">
                                 {link.label}
                             </Link>
                         ))}
@@ -38,8 +39,22 @@ export function Footer() {
 
                     <div className="flex flex-col gap-4">
                         <h4 className="font-serif text-base tracking-wider text-primary-soft uppercase">Reach Us</h4>
-                        <Link href="/contact" className="text-[13px] text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest">Contact & Reserve</Link>
+                        <Link href="/contact" className="inline-block py-2 text-[13px] text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest">Contact & Reserve</Link>
                         <span className="text-[13px] text-foreground/60 uppercase tracking-widest mt-1 block">Udupi, Karnataka, India</span>
+                        <div className="mt-4">
+                            <span className="text-[11px] text-foreground/40 uppercase tracking-[0.15em] block mb-3">Also available on</span>
+                            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                                <a href="https://app.mmyt.co/Xm2V/83t03c2f" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                                    <Image src="/images/ota/MakeMyTrip/MakeMyTrip_idD023S7dF_2.svg" alt="Book TAM-BoSa on MakeMyTrip" width={120} height={28} className="h-[20px] w-auto" />
+                                </a>
+                                <a href="https://www.booking.com/hotel/in/tam-bosa-beach-retreat.en-gb.html" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                                    <Image src="/images/ota/Booking.com/Booking.com_Logo_6.svg" alt="Book TAM-BoSa on Booking.com" width={120} height={28} className="h-[20px] w-auto" />
+                                </a>
+                                <a href="https://www.agoda.com/en-sg/tam-bosa-beach-retreat/hotel/varamballi-in.html" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                                    <Image src="/images/ota/Agoda/Agoda_Logo_3.svg" alt="Book TAM-BoSa on Agoda" width={120} height={28} className="h-[20px] w-auto" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,7 +63,7 @@ export function Footer() {
                 <p>© {new Date().getFullYear()} TAM-BoSa Beach Retreat. All rights reserved.</p>
                 <div className="flex flex-wrap justify-center gap-6">
                     {LEGAL_LINKS.map(link => (
-                        <Link key={link.href} href={link.href} className="hover:text-primary/70 transition-colors">
+                        <Link key={link.href} href={link.href} className="inline-block py-2 hover:text-primary/70 transition-colors">
                             {link.label}
                         </Link>
                     ))}
