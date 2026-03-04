@@ -20,6 +20,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tam-bosa.com"),
   title: {
     default: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
     template: "%s | TAM-BoSa Resort"
@@ -35,13 +36,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/garden.png",
+        url: "/images/og-garden.jpg",
         width: 1200,
         height: 630,
         alt: "TAM-BoSa Beach Retreat Sunrise Entrance",
       },
       {
-        url: "/images/lobby.png",
+        url: "/images/og-lobby.jpg",
         width: 1200,
         height: 630,
         alt: "TAM-BoSa Oceanside View",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
     description: "A private luxury beachfront retreat in Udupi, Karnataka. Experience the duality of ocean waves and calm backwaters.",
-    images: ["/images/garden.png"],
+    images: ["/images/og-garden.jpg"],
   },
   robots: {
     index: true,
