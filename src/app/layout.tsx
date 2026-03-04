@@ -21,14 +21,14 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tam-bosa.com"),
   title: {
-    default: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
+    default: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
     template: "%s | TAM-BoSa Resort"
   },
-  description: "A private luxury beachfront retreat in Udupi, Karnataka. Experience the duality of ocean waves and calm backwaters. Book your exclusive nature getaway today.",
-  keywords: ["Udupi homestay", "Karnataka resort", "beachfront resort", "backwaters", "private villa", "TAM-BoSa"],
+  description: "TAM-BoSa Beach Retreat — a riverside homestay in Udupi, Karnataka. 100m from the beach, surrounded by backwaters. Family-friendly rooms with warm hospitality.",
+  keywords: ["Udupi homestay", "beach homestay Udupi", "TAM-BoSa Beach Retreat", "riverside homestay Karnataka", "beachside stay Udupi", "family homestay near beach Karnataka", "best homestay in Udupi"],
   openGraph: {
-    title: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
-    description: "A private escape wrapped in nature. Where the sea greets you and backwaters lull you into peace.",
+    title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
+    description: "Riverside homestay in Udupi with beach access — calm backwaters on one side, Arabian Sea across the road. Book your stay at TAM-BoSa.",
     url: "https://tam-bosa.com",
     siteName: "TAM-BoSa Resort",
     locale: "en_IN",
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TAM-BoSa Beach Retreat | Luxury Udupi Homestay",
-    description: "A private luxury beachfront retreat in Udupi, Karnataka. Experience the duality of ocean waves and calm backwaters.",
+    title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
+    description: "TAM-BoSa Beach Retreat — a riverside homestay in Udupi, Karnataka. 100m from the beach, surrounded by backwaters. Family-friendly rooms with warm hospitality.",
     images: ["/images/og-garden.webp"],
   },
   robots: {
     index: true,
     follow: true,
-  }
+  },
 };
 
 export default function RootLayout({

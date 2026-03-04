@@ -2,8 +2,17 @@ import type { Metadata } from "next";
 import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
-    title: "Accommodations | Luxury Backwater Villas & Ocean Suites",
-    description: "Explore TAM-BoSa's premium suites. Enjoy direct beach access from our Oceanfront Suites or ultimate privacy in our lush Backwater Villas.",
+    title: "Rooms & Stays | Riverside Guest Rooms in Udupi",
+    description: "Comfortable riverside guest rooms at TAM-BoSa Beach Retreat, Udupi. AC rooms with river views, en-suite bathrooms, and beach access just 100m away.",
+    alternates: {
+        canonical: "https://tam-bosa.com/accommodations",
+    },
+    openGraph: {
+        title: "Rooms & Stays | Riverside Guest Rooms in Udupi",
+        description: "Comfortable riverside guest rooms at TAM-BoSa Beach Retreat, Udupi. AC rooms with river views, en-suite bathrooms, and beach access just 100m away.",
+        url: "https://tam-bosa.com/accommodations",
+        images: [{ url: "/images/og-garden.webp", alt: "TAM-BoSa Beach Retreat rooms" }],
+    },
 };
 
 export default function Page() {
