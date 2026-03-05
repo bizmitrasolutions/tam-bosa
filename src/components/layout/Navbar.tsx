@@ -49,8 +49,9 @@ export function Navbar() {
                     : "bg-black/10 backdrop-blur-sm border-transparent md:rounded-2xl"
                     }`}
             >
-                <Link href="/" className="flex items-center">
-                    <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={240} height={60} className="h-12 md:h-14 w-auto object-contain rounded-full" priority />
+                <Link href="/" className="flex items-center gap-3 md:gap-4">
+                    <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={240} height={60} className="h-10 md:h-12 w-auto object-contain rounded-full" priority />
+                    <span className="font-serif text-lg md:text-xl font-medium tracking-widest text-foreground">TAM-BoSa</span>
                 </Link>
                 <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
                     {NAV_LINKS.map(link => (

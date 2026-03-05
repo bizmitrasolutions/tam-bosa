@@ -101,7 +101,7 @@ export default function RootLayout({
               })
             }}
           />
-          <main className="min-h-screen">
+          <main className="min-h-screen" aria-label="Main content">
             {children}
           </main>
           <Footer />
