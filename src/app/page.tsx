@@ -39,10 +39,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[11vw] md:text-[11vw] leading-[0.85] font-serif text-primary-soft tracking-tighter uppercase relative z-20 flex flex-col items-center"
+            className="text-[11vw] md:text-[8vw] leading-[0.85] font-serif text-primary-soft tracking-tighter uppercase relative z-20 flex flex-col items-center"
           >
-            <span>BEACH</span>
-            <span className="text-foreground text-[8vw] md:text-[8vw] md:ml-[15vw] inline-block mt-2 md:mt-[-1vw]">RETREAT</span>
+            <span>BEACH SIDE</span>
+            <span className="text-foreground text-[8vw] md:text-[8vw] md:ml-[15vw] inline-block mt-2 md:mt-[-1vw]">STAY</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
