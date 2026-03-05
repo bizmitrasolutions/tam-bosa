@@ -5,12 +5,12 @@ export const metadata: Metadata = {
     title: "Rooms & Stays | Riverside Guest Rooms in Udupi",
     description: "Comfortable riverside guest rooms at TAM-BoSa Beach Retreat, Udupi. AC rooms with river views, en-suite bathrooms, and beach access just 100m away.",
     alternates: {
-        canonical: "https://tam-bosa.com/accommodations",
+        canonical: "https://tambosa.com/accommodations",
     },
     openGraph: {
         title: "Rooms & Stays | Riverside Guest Rooms in Udupi",
         description: "Comfortable riverside guest rooms at TAM-BoSa Beach Retreat, Udupi. AC rooms with river views, en-suite bathrooms, and beach access just 100m away.",
-        url: "https://tam-bosa.com/accommodations",
+        url: "https://tambosa.com/accommodations",
         images: [{ url: "/images/og-garden.webp", alt: "TAM-BoSa Beach Retreat rooms" }],
     },
 };

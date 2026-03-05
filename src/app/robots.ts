@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://tam-bosa.com/sitemap.xml',
+        sitemap: 'https://tambosa.com/sitemap.xml',
     }
 }

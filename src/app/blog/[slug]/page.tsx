@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: post.title,
         description: post.metaDescription,
         alternates: {
-            canonical: `https://tam-bosa.com/blog/${post.slug}`,
+            canonical: `https://tambosa.com/blog/${post.slug}`,
         },
         openGraph: {
             title: post.title,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: "article",
             publishedTime: post.publishedDate,
             modifiedTime: post.lastVerified,
-            url: `https://tam-bosa.com/blog/${post.slug}`,
+            url: `https://tambosa.com/blog/${post.slug}`,
             images: [{ url: post.heroImage, alt: post.heroAlt }],
         },
     };
@@ -56,22 +56,22 @@ export default async function BlogPostPage({ params }: Props) {
                         "@type": "Article",
                         "headline": post.title,
                         "description": post.metaDescription,
-                        "image": `https://tam-bosa.com${post.heroImage}`,
+                        "image": `https://tambosa.com${post.heroImage}`,
                         "datePublished": post.publishedDate,
                         "dateModified": post.lastVerified,
                         "author": {
                             "@type": "Organization",
                             "name": "TAM-BoSa Beach Retreat",
-                            "url": "https://tam-bosa.com"
+                            "url": "https://tambosa.com"
                         },
                         "publisher": {
                             "@type": "Organization",
                             "name": "TAM-BoSa Beach Retreat",
-                            "url": "https://tam-bosa.com"
+                            "url": "https://tambosa.com"
                         },
                         "mainEntityOfPage": {
                             "@type": "WebPage",
-                            "@id": `https://tam-bosa.com/blog/${post.slug}`
+                            "@id": `https://tambosa.com/blog/${post.slug}`
                         }
                     })
                 }}
@@ -89,19 +89,19 @@ export default async function BlogPostPage({ params }: Props) {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://tam-bosa.com"
+                                "item": "https://tambosa.com"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Travel Guide",
-                                "item": "https://tam-bosa.com/blog"
+                                "item": "https://tambosa.com/blog"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 3,
                                 "name": post.title,
-                                "item": `https://tam-bosa.com/blog/${post.slug}`
+                                "item": `https://tambosa.com/blog/${post.slug}`
                             }
                         ]
                     })

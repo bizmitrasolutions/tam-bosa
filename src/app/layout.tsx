@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tam-bosa.com"),
+  metadataBase: new URL("https://tambosa.com"),
   title: {
     default: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
     template: "%s | TAM-BoSa Resort"
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
     description: "Riverside homestay in Udupi with beach access — calm backwaters on one side, Arabian Sea across the road. Book your stay at TAM-BoSa.",
-    url: "https://tam-bosa.com",
+    url: "https://tambosa.com",
     siteName: "TAM-BoSa Resort",
     locale: "en_IN",
     type: "website",
@@ -81,7 +81,7 @@ export default function RootLayout({
                 "@type": ["Hotel", "LocalBusiness"],
                 "name": "TAM-BoSa Beach Retreat",
                 "description": "A luxury beachfront homestay located in Udupi, Karnataka, offering private oceanfront suites and backwater villas.",
-                "url": "https://tam-bosa.com",
+                "url": "https://tambosa.com",
                 "telephone": "+91 87222 11666",
                 "email": "tambosabeachretreat@gmail.com",
                 "address": {
