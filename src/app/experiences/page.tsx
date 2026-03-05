@@ -3,7 +3,7 @@ import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
     title: "Experiences | Coastal & Backwater Activities in Udupi",
-    description: "Things to do at TAM-BoSa Beach Retreat — sunrise beach walks, kayaking, backwater boating, and local Udupi cuisine. Explore coastal Karnataka.",
+    description: "Discover the best of beach living in Udupi. From surfing to sunrise walks and serene kayaking, explore the unique coastal experiences at TAM-BoSa.",
     alternates: {
         canonical: "https://tambosa.com/experiences",
     },

@@ -3,7 +3,7 @@ import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
     title: "Travel Guide | Udupi Tips, Beaches & Local Insights",
-    description: "Travel tips for Udupi, Karnataka — best beaches, local food, homestay picks, and backwater experiences. Curated by TAM-BoSa Beach Retreat.",
+    description: "Explore the hidden gems of Udupi. From secret beaches to coastal travel tips, get inspired for your next seaside adventure with the TAM-BoSa guide.",
     alternates: {
         canonical: "https://tambosa.com/blog",
     },

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: post.title,
-        description: post.metaDescription,
+        description: `${post.metaDescription} Discover this and more beach travel insights at TAM-BoSa.`,
         alternates: {
             canonical: `https://tambosa.com/blog/${post.slug}`,
         },

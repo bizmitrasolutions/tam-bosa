@@ -3,7 +3,7 @@ import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
     title: "Contact & Reservations | Reach our Udupi Retreat",
-    description: "Book your stay at TAM-BoSa Beach Retreat, Udupi. Reach us via WhatsApp, phone, or email. Located along the riverside, 100m from the beach in Karnataka.",
+    description: "Plan your seaside getaway today. Reach out to TAM-BoSa Beach Retreat for bookings and experience Udupi’s finest coastal hospitality.",
     alternates: {
         canonical: "https://tambosa.com/contact",
     },

@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     default: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
     template: "%s | TAM-BoSa Resort"
   },
-  description: "TAM-BoSa Beach Retreat — a riverside homestay in Udupi, Karnataka. 100m from the beach, surrounded by backwaters. Family-friendly rooms with warm hospitality.",
+  description: "Experience the ultimate coastal escape at TAM-BoSa Beach Retreat, Udupi. Just steps from the pristine Arabian Sea, our homestay offers luxury beachside living, sun-drenched views, and serene backwater charm.",
   keywords: ["Udupi homestay", "beach homestay Udupi", "TAM-BoSa Beach Retreat", "riverside homestay Karnataka", "beachside stay Udupi", "family homestay near beach Karnataka", "best homestay in Udupi"],
   openGraph: {
     title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
-    description: "Riverside homestay in Udupi with beach access — calm backwaters on one side, Arabian Sea across the road. Book your stay at TAM-BoSa.",
+    description: "Wake up to the sound of waves. TAM-BoSa offers a unique beachside stay in Udupi, perfectly positioned between the Arabian Sea and calm backwaters.",
     url: "https://tambosa.com",
     siteName: "TAM-BoSa Resort",
     locale: "en_IN",

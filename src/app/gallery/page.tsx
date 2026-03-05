@@ -3,7 +3,7 @@ import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
     title: "Gallery | Visual Storytelling of our Beach Retreat",
-    description: "Photos of TAM-BoSa Beach Retreat — river views, guest rooms, beach sunrises, and the lush surroundings of our Udupi homestay. See it before you visit.",
+    description: "Step into paradise through our gallery. See captured moments of golden sunrise beach walks, serene river views, and the coastal beauty surrounding TAM-BoSa.",
     alternates: {
         canonical: "https://tambosa.com/gallery",
     },
