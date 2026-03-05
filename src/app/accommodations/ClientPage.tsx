@@ -18,11 +18,14 @@ const ROOMS = [
         name: "Riverside Guest Rooms",
         desc: "Comfortable, beautifully designed rooms situated by the quiet river, framed by natural greenery. Designed for families and nature lovers, each room offers a peaceful retreat with thoughtful aesthetics, cozy beds, warm hospitality, and easy access to the beach just across the road.",
         images: [
-            "/images/bedroom-8.webp",
             "/images/bedroom-4.webp",
             "/images/bedroom-5.webp",
             "/images/bedroom-7.webp",
-            "/images/washroom.webp"
+            "/images/washroom.webp",
+            "/images/washroom-3.webp",
+            "/images/washroom-4.webp",
+            "/images/washroom-5.webp",
+            "/images/washroom-6.webp"
         ]
     }
 ];
@@ -34,7 +37,7 @@ function RoomCarousel({ images }: { images: string[] }) {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 6000);
+        }, 3000);
         return () => clearInterval(timer);
     }, [images.length]);
 

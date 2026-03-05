@@ -10,16 +10,18 @@ type Category = "All" | "Accommodations" | "Views" | "Common Areas" | "Experienc
 const IMAGES: { src: string; alt: string; category: Category }[] = [
     // Accommodations 
     { src: "/images/bedroom.webp", alt: "Cozy bedroom interior at TAM-BoSa", category: "Accommodations" },
-    { src: "/images/bedroom-2.webp", alt: "TAM-BoSa beachfront view with ocean waves", category: "Accommodations" },
     { src: "/images/bedroom-3.webp", alt: "Premium bedroom with natural lighting", category: "Accommodations" },
     { src: "/images/bedroom-4.webp", alt: "Spacious bedroom interior", category: "Accommodations" },
     { src: "/images/bedroom-5.webp", alt: "Comfortable bedroom setup", category: "Accommodations" },
     { src: "/images/bedroom-6.webp", alt: "Elegant bedroom design", category: "Accommodations" },
     { src: "/images/bedroom-7.webp", alt: "Premium Oceanfront suite bedroom interior", category: "Accommodations" },
-    { src: "/images/bedroom-8.webp", alt: "Luxurious bedroom features", category: "Accommodations" },
     { src: "/images/bedroom-9.webp", alt: "Coastal suite luxury bedroom", category: "Accommodations" },
     { src: "/images/bedroom-10.webp", alt: "Riverside homestay bedroom with authentic decor", category: "Accommodations" },
     { src: "/images/washroom.webp", alt: "Clean and modern washroom at TAM-BoSa homestay", category: "Accommodations" },
+    { src: "/images/washroom-3.webp", alt: "Premium bathroom amenities", category: "Accommodations" },
+    { src: "/images/washroom-4.webp", alt: "Modern washroom interior", category: "Accommodations" },
+    { src: "/images/washroom-5.webp", alt: "Well-maintained guest bathroom", category: "Accommodations" },
+    { src: "/images/washroom-6.webp", alt: "Clean and hygienic washroom facilities", category: "Accommodations" },
 
     // Views
     { src: "/images/beach-view.webp", alt: "Stunning beach view from the retreat", category: "Views" },
