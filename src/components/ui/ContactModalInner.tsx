@@ -14,7 +14,6 @@ export function ContactModalInner() {
     const [formData, setFormData] = useState({
         name: "",
         guests: "2",
-        room: "Oceanfront Suite",
         message: ""
     });
     const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
@@ -33,7 +32,6 @@ export function ContactModalInner() {
 Name: ${formData.name}
 Preferred Dates: ${dateString}
 Number of Guests: ${formData.guests}
-Room Preference: ${formData.room}
 
 *Additional Message:*
 ${formData.message}`;
@@ -127,19 +125,6 @@ ${formData.message}`;
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-2">
-                        <label className="text-[10px] uppercase tracking-[0.2em] text-teal-600">Room Preference</label>
-                        <select
-                            name="room"
-                            value={formData.room}
-                            onChange={handleChange}
-                            className="bg-teal-950/30 border border-teal-800/50 rounded-md p-3.5 min-h-[44px] text-sm text-foreground focus:outline-none focus:border-primary transition-colors appearance-none"
-                        >
-                            <option value="Oceanfront Suite">Oceanfront Suite</option>
-                            <option value="Backwater Villa">Backwater Villa</option>
-                            <option value="No Preference">No Preference</option>
-                        </select>
-                    </div>
 
                     <div className="flex flex-col gap-2">
                         <label className="text-[10px] uppercase tracking-[0.2em] text-teal-600">Additional Message (Optional)</label>
