@@ -50,7 +50,7 @@ export function Navbar() {
                     }`}
             >
                 <Link href="/" className="flex items-center">
-                    <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={160} height={40} className="h-10 w-auto object-contain" priority />
+                    <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={240} height={60} className="h-12 md:h-14 w-auto object-contain rounded-full" priority />
                 </Link>
                 <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
                     {NAV_LINKS.map(link => (

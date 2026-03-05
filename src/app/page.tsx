@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div ref={containerRef} className="relative bg-[#041B1C] overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[110vh] flex flex-col justify-center overflow-hidden">
+      <section className="relative h-screen flex flex-col justify-center overflow-hidden">
         {/* Abstract Background Gradient & Image */}
         <div className="absolute inset-0 z-0">
           <OptimizedImage
@@ -34,29 +34,29 @@ export default function Home() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4"
         >
-          <h1 className="sr-only">TAM-BoSa Riverside Retreat in Udupi</h1>
+          <h1 className="sr-only">TAM-BoSa Beach Retreat in Udupi</h1>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-[11vw] md:text-[11vw] leading-[0.85] font-serif text-primary-soft tracking-tighter uppercase relative z-20 flex flex-col items-center"
           >
-            <span>RIVERSIDE</span>
-            <span className="text-foreground md:ml-[15vw] inline-block mt-[-2vw]">STAY</span>
+            <span>BEACH</span>
+            <span className="text-foreground text-[8vw] md:text-[8vw] md:ml-[15vw] inline-block mt-2 md:mt-[-1vw]">RETREAT</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 1.2 }}
-            className="mt-16 text-xs md:text-sm text-primary font-sans max-w-xl mx-auto font-medium tracking-[0.4em] uppercase"
+            className="mt-12 md:mt-16 text-xs md:text-sm text-primary font-sans max-w-xl mx-auto font-medium tracking-[0.3em] md:tracking-[0.4em] uppercase"
           >
-            A Peaceful Escape Beside the River
+            Just steps away from the Arabian Sea
           </motion.p>
         </motion.div>
       </section>
 
       {/* The Duality */}
-      <section className="relative min-h-[150vh] bg-foreground text-background py-20 md:py-40 px-6 overflow-x-hidden">
+      <section className="relative bg-foreground text-background py-16 md:py-24 px-6 overflow-x-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           <div className="relative w-full h-[60vh] md:h-[80vh] flex flex-col justify-center">
 
@@ -88,7 +88,7 @@ export default function Home() {
 
           </div>
 
-          <div className="mt-28 md:mt-48 w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 items-end max-w-5xl">
+          <div className="mt-16 md:mt-24 w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-end max-w-5xl">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -117,12 +117,12 @@ export default function Home() {
       </section>
 
       {/* The Retreat's Essence */}
-      <section className="relative py-20 md:py-40 lg:py-60 bg-[#041B1C] text-foreground px-6 overflow-hidden">
+      <section className="relative py-16 md:py-24 lg:py-32 bg-[#041B1C] text-foreground px-6 overflow-hidden">
         <div className="absolute right-0 top-0 w-1/3 h-full bg-teal-900/20 blur-[100px] rounded-full mix-blend-screen pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10">
-          <h3 className="text-xl md:text-2xl uppercase font-bold tracking-[0.4em] text-primary mb-20 md:mb-32 ml-4 md:ml-20">The Essence</h3>
+          <h3 className="text-xl md:text-2xl uppercase font-bold tracking-[0.4em] text-primary mb-12 md:mb-20 ml-4 md:ml-20">The Essence</h3>
 
-          <div className="flex flex-col gap-28 md:gap-48">
+          <div className="flex flex-col gap-16 md:gap-24">
             {[
               {
                 num: "01",
@@ -173,14 +173,14 @@ export default function Home() {
       </section>
 
       {/* Guest Testimonials */}
-      <section className="relative py-24 md:py-40 bg-foreground text-background px-6 overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-foreground text-background px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="text-center mb-16 md:mb-24"
+            className="text-center mb-12 md:mb-16"
           >
             <h3 className="text-[10px] uppercase font-bold tracking-[0.4em] text-teal-700 mb-6">What Our Guests Say</h3>
             <h2 className="text-3xl md:text-5xl font-serif text-[#041B1C] leading-tight">Moments That Stay</h2>
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* Outro CTA */}
-      <section className="py-24 md:py-32 bg-primary flex justify-center text-center px-6">
+      <section className="py-16 md:py-24 bg-primary flex justify-center text-center px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl md:text-5xl font-serif text-teal-900 leading-tight mb-10">
             Come spend a few days with us by the river.

@@ -17,14 +17,21 @@ const IMAGES: { src: string; alt: string; category: Category }[] = [
     { src: "/images/bedroom-6.webp", alt: "Elegant bedroom design", category: "Accommodations" },
     { src: "/images/bedroom-7.webp", alt: "Premium Oceanfront suite bedroom interior", category: "Accommodations" },
     { src: "/images/bedroom-8.webp", alt: "Luxurious bedroom features", category: "Accommodations" },
+    { src: "/images/bedroom-9.webp", alt: "Coastal suite luxury bedroom", category: "Accommodations" },
+    { src: "/images/bedroom-10.webp", alt: "Riverside homestay bedroom with authentic decor", category: "Accommodations" },
     { src: "/images/washroom.webp", alt: "Clean and modern washroom at TAM-BoSa homestay", category: "Accommodations" },
 
     // Views
     { src: "/images/beach-view.webp", alt: "Stunning beach view from the retreat", category: "Views" },
+    { src: "/images/beach-view-2.webp", alt: "Golden hour sunset walks at the beach", category: "Views" },
+    { src: "/images/beach-view-3.webp", alt: "Pristine sandy beach across from TAM-BoSa", category: "Views" },
     { src: "/images/delta-point.webp", alt: "Scenic delta point view", category: "Views" },
     { src: "/images/garden.webp", alt: "Lush green garden area", category: "Views" },
+    { src: "/images/garden-2.webp", alt: "Beautiful landscape gardening at the retreat", category: "Views" },
     { src: "/images/outside-view.webp", alt: "Exterior view of the property", category: "Views" },
     { src: "/images/river-view.webp", alt: "Calm river view", category: "Views" },
+    { src: "/images/river-view-2.webp", alt: "Tranquil morning mist over the river", category: "Views" },
+    { src: "/images/river-view-3.webp", alt: "Boats resting by the gentle river", category: "Views" },
     { src: "/images/sunset-view.webp", alt: "Breathtaking sunset view", category: "Views" },
 
     // Common Areas
@@ -34,11 +41,14 @@ const IMAGES: { src: string; alt: string; category: Category }[] = [
     { src: "/images/sitting-area.webp", alt: "Comfortable sitting area at TAM-BoSa homestay Udupi", category: "Common Areas" },
     { src: "/images/sitting-area-2.webp", alt: "Relaxing sitting lounge", category: "Common Areas" },
     { src: "/images/sitting-area-3.webp", alt: "Spacious sitting and gathering area", category: "Common Areas" },
+    { src: "/images/photo-booth.webp", alt: "Memorable photo booth area for guests", category: "Common Areas" },
 
     // Experiences
     { src: "/images/boat-ride.webp", alt: "Exciting boat ride experience", category: "Experiences" },
     { src: "/images/jet-ski.webp", alt: "Thrilling jet ski adventure", category: "Experiences" },
-    { src: "/images/kayaking.webp", alt: "Kayaking along the serene waters", category: "Experiences" }
+    { src: "/images/kayaking.webp", alt: "Kayaking along the serene waters", category: "Experiences" },
+    { src: "/images/kayaking-2.webp", alt: "Sunset kayaking adventure", category: "Experiences" },
+    { src: "/images/kayaking-3.webp", alt: "Group kayaking in the calm river", category: "Experiences" }
 ];
 
 const CATEGORIES: Category[] = ["All", "Accommodations", "Views", "Common Areas", "Experiences"];
