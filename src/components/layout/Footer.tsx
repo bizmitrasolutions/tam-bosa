@@ -20,7 +20,7 @@ export function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-12 relative z-10">
                 <div className="max-w-md">
                     <Link href="/" className="inline-block mb-4">
-                        <Image src="/logo-transparent.png" alt="TAM-BoSa Beach Retreat Udupi Logo" width={160} height={160} className="h-20 w-20 md:h-24 md:w-24 object-contain rounded-full" />
+                        <Image src="/logo-transparent.png" alt="TAM-BoSa Beach Retreat Udupi Logo" width={200} height={200} className="h-28 md:h-36 w-auto object-contain" />
                     </Link>
                     <p className="text-[14px] text-foreground/70 leading-relaxed font-sans font-light">
                         A peaceful riverside retreat wrapped in nature. Family-friendly comfort with thoughtful architecture, just a short walk to the beach.
