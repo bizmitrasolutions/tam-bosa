@@ -18,9 +18,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: post.title,
-        description: `${post.metaDescription} Discover this and more beach travel insights at TAM-BoSa.`,
+        description: `${post.metaDescription} Call +91 87222 11666 for bookings at TAM-BoSa.`,
         alternates: {
-            canonical: `https://tambosa.com/blog/${post.slug}`,
+            canonical: `https://www.tambosa.com/blog/${post.slug}`,
         },
         openGraph: {
             title: post.title,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: "article",
             publishedTime: post.publishedDate,
             modifiedTime: post.lastVerified,
-            url: `https://tambosa.com/blog/${post.slug}`,
+            url: `https://www.tambosa.com/blog/${post.slug}`,
             images: [{ url: post.heroImage, alt: post.heroAlt }],
         },
     };
@@ -56,22 +56,22 @@ export default async function BlogPostPage({ params }: Props) {
                         "@type": "Article",
                         "headline": post.title,
                         "description": post.metaDescription,
-                        "image": `https://tambosa.com${post.heroImage}`,
+                        "image": `https://www.tambosa.com${post.heroImage}`,
                         "datePublished": post.publishedDate,
                         "dateModified": post.lastVerified,
                         "author": {
                             "@type": "Organization",
                             "name": "TAM-BoSa Beach Retreat",
-                            "url": "https://tambosa.com"
+                            "url": "https://www.tambosa.com"
                         },
                         "publisher": {
                             "@type": "Organization",
                             "name": "TAM-BoSa Beach Retreat",
-                            "url": "https://tambosa.com"
+                            "url": "https://www.tambosa.com"
                         },
                         "mainEntityOfPage": {
                             "@type": "WebPage",
-                            "@id": `https://tambosa.com/blog/${post.slug}`
+                            "@id": `https://www.tambosa.com/blog/${post.slug}`
                         }
                     })
                 }}
@@ -89,19 +89,19 @@ export default async function BlogPostPage({ params }: Props) {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://tambosa.com"
+                                "item": "https://www.tambosa.com"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Travel Guide",
-                                "item": "https://tambosa.com/blog"
+                                "item": "https://www.tambosa.com/blog"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 3,
                                 "name": post.title,
-                                "item": `https://tambosa.com/blog/${post.slug}`
+                                "item": `https://www.tambosa.com/blog/${post.slug}`
                             }
                         ]
                     })

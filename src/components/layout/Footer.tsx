@@ -40,6 +40,7 @@ export function Footer() {
                     <div className="flex flex-col gap-3">
                         <h4 className="font-serif text-base tracking-wider text-primary-soft uppercase">Reach Us</h4>
                         <Link href="/contact" className="inline-block py-2 text-[13px] text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest">Contact & Reserve</Link>
+                        <a href="tel:+918722211666" className="text-[13px] text-foreground/80 hover:text-primary transition-colors uppercase tracking-widest block py-2">+91 87222 11666</a>
                         <span className="text-[13px] text-foreground/60 uppercase tracking-widest mt-1 block">Udupi, Karnataka, India</span>
                         <div className="mt-4">
                             <span className="text-[11px] text-foreground/40 uppercase tracking-[0.15em] block mb-3">Also available on</span>

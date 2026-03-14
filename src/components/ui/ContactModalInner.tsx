@@ -144,6 +144,11 @@ ${formData.message}`;
                     >
                         Continue to WhatsApp
                     </button>
+
+                    <div className="mt-4 pt-6 border-t border-teal-800/30 text-center">
+                        <p className="text-[10px] uppercase tracking-[0.2em] text-teal-600 mb-3">Prefer a direct call?</p>
+                        <a href="tel:+918722211666" className="text-primary hover:text-primary-soft transition-colors font-serif text-lg tracking-wider">+91 87222 11666</a>
+                    </div>
                 </form>
             </motion.div>
         </>

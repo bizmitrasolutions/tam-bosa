@@ -19,17 +19,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tambosa.com"),
+  metadataBase: new URL("https://www.tambosa.com"),
   title: {
     default: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
     template: "%s | TAM-BoSa Resort"
   },
-  description: "Experience the ultimate coastal escape at TAM-BoSa Beach Retreat, Udupi. Just steps from the pristine Arabian Sea, our homestay offers luxury beachside living, sun-drenched views, and serene backwater charm.",
+  description: "Experience the ultimate coastal escape at TAM-BoSa Beach Retreat, Udupi. Just steps from the Arabian Sea, our homestay offers luxury beachside living. For bookings, contact us at +91 87222 11666.",
   keywords: ["Udupi homestay", "beach homestay Udupi", "TAM-BoSa Beach Retreat", "riverside homestay Karnataka", "beachside stay Udupi", "family homestay near beach Karnataka", "best homestay in Udupi"],
   openGraph: {
     title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
-    description: "Wake up to the sound of waves. TAM-BoSa offers a unique beachside stay in Udupi, perfectly positioned between the Arabian Sea and calm backwaters.",
-    url: "https://tambosa.com",
+    description: "Wake up to the sound of waves at TAM-BoSa Udupi. Luxury beachside stay between the sea and backwaters. Call +91 87222 11666 for reservations.",
+    url: "https://www.tambosa.com",
     siteName: "TAM-BoSa Resort",
     locale: "en_IN",
     type: "website",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
-    description: "TAM-BoSa Beach Retreat — a riverside homestay in Udupi, Karnataka. 100m from the beach, surrounded by backwaters. Family-friendly rooms with warm hospitality.",
+    description: "TAM-BoSa Beach Retreat — riverside homestay in Udupi, Karnataka. 100m from the beach. For inquiries, call +91 87222 11666.",
     images: ["/images/og-garden.webp"],
   },
   robots: {
@@ -81,7 +81,7 @@ export default function RootLayout({
                 "@type": ["Hotel", "LocalBusiness"],
                 "name": "TAM-BoSa Beach Retreat",
                 "description": "A luxury beachfront homestay located in Udupi, Karnataka, offering private oceanfront suites and backwater villas.",
-                "url": "https://tambosa.com",
+                "url": "https://www.tambosa.com",
                 "telephone": "+91 87222 11666",
                 "email": "tambosabeachretreat@gmail.com",
                 "address": {

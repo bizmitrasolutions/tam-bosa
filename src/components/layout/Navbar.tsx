@@ -53,12 +53,15 @@ export function Navbar() {
                     <Image src="/logo.webp" alt="TAM-BoSa Beach Retreat Udupi Logo" width={240} height={60} className="h-10 md:h-12 w-auto object-contain rounded-full" priority />
                     <span className="font-serif text-lg md:text-xl font-medium tracking-widest text-foreground">TAM-BoSa</span>
                 </Link>
-                <div className="hidden md:flex gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
+                <div className="hidden md:flex items-center gap-8 lg:gap-10 text-[13px] uppercase tracking-widest font-medium text-foreground/80 lg:text-sm">
                     {NAV_LINKS.map(link => (
                         <Link key={link.href} href={link.href} className="hover:text-primary transition-colors py-2 px-1">
                             {link.label}
                         </Link>
                     ))}
+                    <a href="tel:+918722211666" className="text-primary hover:text-primary-soft transition-colors py-2 px-1 flex items-center gap-2">
+                        Call Us
+                    </a>
                 </div>
                 <button
                     onClick={openModal}
@@ -95,12 +98,20 @@ export function Navbar() {
                             </Link>
                         ))}
 
-                        <button
-                            onClick={() => { setMobileMenuOpen(false); openModal(); }}
-                            className="mt-4 px-10 min-h-[44px] flex items-center justify-center bg-primary text-background font-semibold uppercase tracking-widest text-xs rounded-sm hover:bg-primary-soft transition-colors"
-                        >
-                            Reserve Now
-                        </button>
+                        <div className="mt-4 flex flex-col items-center gap-4">
+                            <a
+                                href="tel:+918722211666"
+                                className="px-10 min-h-[44px] flex items-center justify-center border border-primary text-primary font-semibold uppercase tracking-widest text-[13px] rounded-sm hover:bg-primary/10 transition-colors w-full"
+                            >
+                                Call: +91 87222 11666
+                            </a>
+                            <button
+                                onClick={() => { setMobileMenuOpen(false); openModal(); }}
+                                className="px-10 min-h-[44px] flex items-center justify-center bg-primary text-background font-semibold uppercase tracking-widest text-[13px] rounded-sm hover:bg-primary-soft transition-colors w-full"
+                            >
+                                Reserve Now
+                            </button>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

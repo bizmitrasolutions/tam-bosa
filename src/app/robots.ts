@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
+            disallow: '/_next/static/',
         },
-        sitemap: 'https://tambosa.com/sitemap.xml',
+        sitemap: 'https://www.tambosa.com/sitemap.xml',
     }
 }
