@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: post.title,
-        description: `${post.metaDescription} Call +91 87222 11666 for bookings at TAM-BoSa.`,
+        description: `Call +91 87222 11666 for stay inquiries. ${post.metaDescription}`,
         alternates: {
             canonical: `https://www.tambosa.com/blog/${post.slug}`,
         },

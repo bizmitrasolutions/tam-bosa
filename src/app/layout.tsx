@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     default: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
     template: "%s | TAM-BoSa Resort"
   },
-  description: "Experience the ultimate coastal escape at TAM-BoSa Beach Retreat, Udupi. Just steps from the Arabian Sea, our homestay offers luxury beachside living. For bookings, contact us at +91 87222 11666.",
+  description: "Call +91 87222 11666 for bookings. Experience the ultimate coastal escape at TAM-BoSa Beach Retreat, Udupi. Just steps from the Arabian Sea, our homestay offers luxury beachside living.",
   keywords: ["Udupi homestay", "beach homestay Udupi", "TAM-BoSa Beach Retreat", "riverside homestay Karnataka", "beachside stay Udupi", "family homestay near beach Karnataka", "best homestay in Udupi"],
   openGraph: {
     title: "TAM-BoSa Beach Retreat | Premium Beachside Homestay in Udupi",
-    description: "Wake up to the sound of waves at TAM-BoSa Udupi. Luxury beachside stay between the sea and backwaters. Call +91 87222 11666 for reservations.",
+    description: "Call +91 87222 11666 for reservations. Wake up to the sound of waves at TAM-BoSa Udupi. Luxury beachside stay between the sea and backwaters.",
     url: "https://www.tambosa.com",
     siteName: "TAM-BoSa Resort",
     locale: "en_IN",

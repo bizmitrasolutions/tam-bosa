@@ -3,7 +3,7 @@ import ClientPage from "./ClientPage";
 
 export const metadata: Metadata = {
     title: "Rooms & Stays | Riverside Guest Rooms in Udupi",
-    description: "Relax in luxury just steps from the Arabian Sea. Our beachside rooms in Udupi offer the perfect blend of coastal comfort. For bookings, call +91 87222 11666.",
+    description: "Call +91 87222 11666 for bookings. Luxury riverside and beachside accommodations in Udupi. Experience comfort at TAM-BoSa Beach Retreat.",
     alternates: {
         canonical: "https://www.tambosa.com/accommodations",
     },
